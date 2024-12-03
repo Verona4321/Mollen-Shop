@@ -10,8 +10,14 @@
     src: url('../fonts/circe/Circe-Regular.woff');
 }
 
+@font-face {
+    font-weight: 300;
+    font-family: 'Circle';
+    src: url('../fonts/circe/Circe-Light.woff');
+}
+
 body {
-    padding: 10vw;
+    padding: 5vw;
 }
 
 h1, h2 {
@@ -20,10 +26,17 @@ h1, h2 {
     font-weight: 500;
 }
 
-h1 {font-size: 4vw;}
+h1 {font-size: 4vw; color: #1E1E1E;}
+h2 {font-size: 1.5vw; color: #1E1E1E;}
 
 p {font-family: 'Circle';
     font-weight: 400;}
+
+.links-header {    /*Это стили для ссылок вверху над заголовками*/
+    font-family: 'Circle';
+    font-weight: 300;
+    font-size: 1vw;
+}
 
 @media (min-width: 1800px) {
     body {
