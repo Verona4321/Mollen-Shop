@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Orchidea Pro Lt';
+    src: url('OrchideaPro-Light.woff2') format('woff2'),
+        url('OrchideaPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro';
+    src: url('OrchideaPro-BoldItalic.woff2') format('woff2'),
+        url('OrchideaPro-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro ExLt';
+    src: url('OrchideaPro-ExtraLight.woff2') format('woff2'),
+        url('OrchideaPro-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro Bk';
+    src: url('OrchideaPro-Black.woff2') format('woff2'),
+        url('OrchideaPro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro';
+    src: url('OrchideaPro-Bold.woff2') format('woff2'),
+        url('OrchideaPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro Bk';
+    src: url('OrchideaPro-BlackItalic.woff2') format('woff2'),
+        url('OrchideaPro-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro ExBd';
+    src: url('OrchideaPro-ExtraBold.woff2') format('woff2'),
+        url('OrchideaPro-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro ExLt';
+    src: url('OrchideaPro-ExtraLightItalic.woff2') format('woff2'),
+        url('OrchideaPro-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro Lt';
+    src: url('OrchideaPro-LightItalic.woff2') format('woff2'),
+        url('OrchideaPro-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro ExBd';
+    src: url('OrchideaPro-ExtraBoldItalic.woff2') format('woff2'),
+        url('OrchideaPro-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro';
+    src: url('OrchideaPro-Italic.woff2') format('woff2'),
+        url('OrchideaPro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro Md';
+    src: url('OrchideaPro-Medium.woff2') format('woff2'),
+        url('OrchideaPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro Md';
+    src: url('OrchideaPro-MediumItalic.woff2') format('woff2'),
+        url('OrchideaPro-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro SmBd';
+    src: url('OrchideaPro-SemiBold.woff2') format('woff2'),
+        url('OrchideaPro-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro SmBd';
+    src: url('OrchideaPro-SemiBoldItalic.woff2') format('woff2'),
+        url('OrchideaPro-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Orchidea Pro';
+    src: url('OrchideaPro-Regular.woff2') format('woff2'),
+        url('OrchideaPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

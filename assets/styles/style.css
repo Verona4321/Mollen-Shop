@@ -1,2 +1,34 @@
-/*Тут общие стили для всего проекта*/
+@font-face {
+    font-weight: 500;
+    font-family: 'Orchidea Pro';
+    src: url('../fonts/orchidea-pro/OrchideaPro-Regular.otf');
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: 'Circle';
+    src: url('../fonts/circe/Circe-Regular.woff');
+}
+
+body {
+    padding: 10vw;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    font-family: 'Orchidea Pro';
+    font-weight: 500;
+}
+
+h1 {font-size: 4vw;}
+
+p {font-family: 'Circle';
+    font-weight: 400;}
+
+@media (min-width: 1800px) {
+    body {
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+}
 
