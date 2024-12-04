@@ -26,8 +26,8 @@ h1, h2 {
     font-weight: 500;
 }
 
-h1 {font-size: 4vw; color: #1E1E1E;}
-h2 {font-size: 1.5vw; color: #1E1E1E;}
+h1 {font-size: 40px; color: #1E1E1E;}
+h2 {font-size: 14px; color: #1E1E1E;}
 
 p {font-family: 'Circle';
     font-weight: 400;}
@@ -35,8 +35,14 @@ p {font-family: 'Circle';
 .links-header {    /*Это стили для ссылок вверху над заголовками*/
     font-family: 'Circle';
     font-weight: 300;
-    font-size: 1vw;
+    font-size: 14px;
+    text-decoration: none;
+    color: #72716E;
 }
+
+.links-header:hover {color: black;}
+
+a {font-size: 14px;}
 
 @media (min-width: 1800px) {
     body {

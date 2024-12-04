@@ -8,5 +8,10 @@ aside {
     height: 100%;
     border-right:  1px solid rgba(236,  234,  231, 1);
     font-family: 'Circle';
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.categories {
+    color: #4E76C6;
 }
