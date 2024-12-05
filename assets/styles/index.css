@@ -1,0 +1,95 @@
+.girl-on-bed_image-container {
+  position: absolute;
+  width: 99vw;
+}
+
+.girl-on-bed_image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+.girl-on-bed_transparent {
+  position: relative;
+  width: 99vw;
+  height: 131vh;
+}
+
+.girl-on-bed_transparent-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.button {
+  z-index: 100;
+  position: absolute;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* text-shadow: #d1c4e9 0.1px 0 10px; */
+  height: 4.1vw;
+  width: 4.1vw;
+  border: none;
+  border-radius: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.button-1 {
+  top: 17vw;
+  left: 20vw;
+}
+
+.button-2 {
+  top: 27vw;
+  left: 42vw;
+}
+
+.button-3 {
+  top: 37vw;
+  left: 17vw;
+}
+
+.button-4 {
+  top: 45vw;
+  left: 75vw;
+}
+
+.button-5 {
+  top: 55vw;
+  left: 15vw;
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  background: white;
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+  border-radius: 175px;
+  box-shadow: 0px 0px 24px 1px rgba(224, 199, 224, 0.2);
+  transition: all 900ms cubic-bezier(1, -0.195, 0, 1.33);
+  transition-timing-function: cubic-bezier(1, -0.195, 0, 1.33);
+}
+
+.button:hover:before {
+  width: 85%;
+  height: 85%;
+}
+
+.button:active:before,
+.btn:focus:before {
+  width: 100%;
+  height: 100%;
+}
+
+.button-text {
+  margin-left: 190px;
+}
