@@ -1,0 +1,298 @@
+
+@font-face {
+    src: url("assets/fonts/orchidea-pro/OrchideaPro-Regular.otf");
+    font-family: 'OrchideaPro-Regular';
+}
+
+@font-face {
+    src: url("assets/fonts/circe/Circe-Light.woff");
+    font-family: "Circe-Light";
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Circe-Light", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #72716E;
+}
+
+a {   
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+h2 {
+    margin-top: 60px;
+}
+
+
+input {
+    background: transparent;
+    border: none;
+}
+
+input:active, input:focus {
+    outline: 0;
+    outline-offset: 0;
+    
+} 
+
+.menu, .total-price__name {
+    margin-top: 40px;
+
+}
+
+.total-price__name, .total-price__result {
+    margin-left: 35px;
+}
+
+.total-price__result {
+color: #4E76C6;
+}
+
+.menu-list {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    list-style-position: inside; 
+    padding-left: 0;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 160px 1fr;
+    border-top: 1px solid #ECEAE7;
+}
+
+.order-info {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 584px 413px 312px 1fr;
+}
+
+.menu-container, .order-info__subtitle, .order-info__user-form, .order-info__delivery-form, .order-info__pay-form, .order-info__card-products-list {
+    border-right: 1px solid #ECEAE7;
+    border-bottom: 1px solid #ECEAE7;
+}
+
+.total-price, .totals, .user-form-item {
+    border-bottom: 1px solid #ECEAE7;
+}
+
+.inner-container {
+    margin-top: 60px;
+    margin-bottom: 60px;    
+    margin-right: 80px;
+    margin-left: 40px;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-form-item {
+    height: 46px;
+    width: 100%;
+    display: flex;
+}
+.radio {
+    height: 35px;
+    width: 100%;
+    display: flex;
+}
+
+.user-form-item__title {
+    width: 120px;
+}
+
+.radio {
+    justify-content: end;
+    align-items: center;
+    gap: 25px;
+}
+
+.radio-item {
+    display: flex;
+    gap: 10px;
+}
+
+input, select, select:focus, select:hover {
+    border:none;
+    outline:none;
+    border:transparent;
+    color: #72716E;
+}
+
+input::placeholder {
+    color: rgba(30, 30, 30, 0.4);
+}
+
+.delivery-form-item, .delivery-form-item__input {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.delivery-form-item:nth-child(2n) {
+    padding-top: 20px;
+    border-top: 1px solid #ECEAE7;
+}
+.delivery-form-item__price {
+    min-width: 77px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.pay-form-item {
+    display: flex;
+}
+
+.pay-form-item__input, .pay-form-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.pay-form-item:nth-child(2n) {
+    border-top: 1px solid #ECEAE7;
+    border-bottom: 1px solid #ECEAE7;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.order-info__card-products-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-products-list-item {
+    width: 50%;
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delete-item__btn {
+    width: 25px;
+    height: 25px;
+    margin-top: 25px;
+    margin-right: 25px;
+    border-radius: 50px;
+    background-image: url(assets/images/delete.svg);
+    background-size: cover;
+    border: none;
+    align-self: flex-end;
+}
+
+.product-img {
+    height: 148;
+    width: 100%;
+}
+.product-img__img {
+    width: 100%;
+}
+.product-name {
+    margin-top: 20px;
+}
+
+.product-quantity {
+    margin-top: 28px;
+
+}
+
+.product-price {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-family: 'OrchideaPro-Regular';
+    font-size: 20px;
+    color: #1E1E1E;
+    margin-bottom: 30px;
+}
+
+.totals__inner-container {
+    margin-left: 38px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.totals__item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.totals__btn {
+    height: 60px;
+    border-radius: 35px;
+    border: none;
+    text-transform: uppercase;
+}
+
+.circle, .totals__terms-link, .menu-link, .total-price__name, .product-quantity  {
+    font-family: "Circe-Light";
+    font-weight: 400;
+    font-size: 14px;
+    color: #72716E;
+}
+
+.total-price__result {
+    text-transform: uppercase;
+    font-family: 'OrchideaPro-Regular';
+    font-size: 40px;
+}
+
+.orh, .product-name, .totals__btn  {
+    text-transform: uppercase;
+    font-family: 'OrchideaPro-Regular';
+    font-size: 14px;
+    color: #1E1E1E;
+}
+
+.user-form-item__title, .option {
+    font-family: "Circe-Light";
+    font-weight: 400;
+    font-size: 18px;
+    color: #72716E;
+}
+
+.input-field::-webkit-input-placeholder {
+    font-family: "Circe-Light";
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.input-field::-moz-placeholder {    
+    font-family: "Circe-Light";
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.input-field:-ms-input-placeholder {
+    font-family: "Circe-Light";
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.input-field:-moz-placeholder {
+    font-family: "Circe-Light";
+    font-weight: 400;
+    font-size: 18px;
+}
