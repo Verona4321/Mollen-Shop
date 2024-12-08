@@ -12,6 +12,66 @@ aside {
     font-size: 18px;
 }
 
+main {
+    width: 80%;
+}
+
 .categories {
     color: #4E76C6;
+}
+
+h1 {
+    margin-left: 30px;
+}
+
+.linen-categories {
+    display: flex;
+    justify-content: space-between;
+    height: 75px;
+    width: 100%;
+    cursor: pointer;
+    color: #72716E;
+}
+
+.category:hover {
+    color: #1E1E1E;
+    background-color: #F5F3F0;
+}
+
+.category {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Orchidea Pro';
+    width: 25%;
+    border:  1px solid rgba(236,  234,  231, 1);
+    font-size: 14px;
+}
+
+.size {
+    border:  1px solid rgba(236,  234,  231, 1);
+    font-size: 14px;
+    text-align: center;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bedLinen {margin-top: 30px;}
+
+.size:hover {
+    background-color: #F5F3F0;
+    color: #1E1E1E;
+}
+
+.sizes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
