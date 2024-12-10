@@ -88,7 +88,6 @@ a {font-size: 14px;}
     height: 35px;
     margin-left: 70%;
     margin-bottom: 40px;
-    border-radius: 10px;
 }
 
 .icon-image {
@@ -149,4 +148,3 @@ a {font-size: 14px;}
     display: block; /* Показать кнопку при наведении на карточку */
 }
 
-.choose__print {}
