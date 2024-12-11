@@ -1,13 +1,25 @@
 @font-face {
-  font-weight: 500;
-  font-family: 'Orchidea Pro';
-  src: url('../fonts/orchidea-pro/OrchideaPro-Regular.otf');
+    font-weight: 500;
+    font-family: 'Orchidea Pro';
+    src: url('../fonts/orchidea-pro/OrchideaPro-Medium.otf');
 }
 
 @font-face {
-  font-weight: 400;
-  font-family: 'Circle';
-  src: url('../fonts/circe/Circe-Regular.woff');
+    font-weight: 400;
+    font-family: 'Orchidea Pro';
+    src: url('../fonts/orchidea-pro/OrchideaPro-Regular.otf');
+}
+
+@font-face {
+    font-weight: 300;
+    font-family: 'Orchidea Pro';
+    src: url('../fonts/orchidea-pro/OrchideaPro-Light.otf');
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: 'Circle';
+    src: url('../fonts/circe/Circe-Regular.woff');
 }
 
 @font-face {
@@ -50,9 +62,9 @@ p {
   color: #72716e;
 }
 
-.links-header:hover {
-  color: black;
-}
+.links-header:hover {color: black;}
+.links-header:first-child {margin-left: 30px;}
+
 
 a {
   font-size: 14px;
@@ -64,3 +76,89 @@ a {
     margin: 0 auto;
   }
 }
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    /*justify-content: space-between;*/
+}
+
+.card {
+    width: calc(99.54% / 2.9999999);
+    text-align: center;
+    border:  1px solid rgba(236,  234,  231, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.icon {
+    width: 30px;
+    height: 35px;
+    margin-left: 70%;
+    margin-bottom: 40px;
+}
+
+.icon-image {
+    width: 30px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.product-name {
+    width: 60%;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.product-image {
+    width: 170px;
+}
+
+.price {
+    font-family: 'Orchidea Pro';
+    font-weight: 400;
+    font-size: 22px;
+    color: #1E1E1E;
+    margin-top: 15px;
+}
+
+.availability {
+    font-family: 'Orchidea Pro';
+    font-weight: 300;
+    color: #72716E;
+}
+
+.buy-button {
+    display: none; /* Скрыть кнопку по умолчанию */
+    background-color: #4E76C6; 
+    color: white; 
+    border: none; 
+    border-radius: 20px; 
+    padding: 10px 20px; 
+    cursor: pointer; /* Изменение курсора при наведении */
+    margin-top: 15px;
+    width: 40%;
+    height: 40px;
+    text-transform: uppercase;
+    font-family: 'Orchidea Pro';
+    font-size: 14px;
+}
+
+.card:hover {
+    transform: scale(1.2); /* Увеличение карточки при наведении */
+    background-color: white;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card:hover .buy-button {
+    display: block; /* Показать кнопку при наведении на карточку */
+}
+
+
