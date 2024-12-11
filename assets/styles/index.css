@@ -1,0 +1,181 @@
+.girl-on-bed_image-container {
+  /* width: 99vw; */
+  font-family: 'Orchidea Pro';
+}
+
+.girl-on-bed_image {
+  width: 100%;
+  height: auto;
+}
+
+.girl-on-bed_transparent-image {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.button {
+  z-index: 100;
+  position: absolute;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  height: 4.1vw;
+  width: 4.1vw;
+  border: none;
+  border-radius: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.girl-on-bed_image-container .button-1 {
+  top: 17vw;
+  left: 20vw;
+}
+
+.girl-on-bed_image-container .button-2 {
+  top: 27vw;
+  left: 42vw;
+}
+
+.girl-on-bed_image-container .button-3 {
+  top: 37vw;
+  left: 17vw;
+}
+
+.girl-on-bed_image-container .button-4 {
+  top: 45vw;
+  left: 75vw;
+}
+
+.girl-on-bed_image-container .button-5 {
+  top: 55vw;
+  left: 15vw;
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  background: white;
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+  border-radius: 175px;
+  box-shadow: 0px 0px 24px 1px rgba(224, 199, 224, 0.2);
+  transition: all 900ms cubic-bezier(1, -0.195, 0, 1.33);
+  transition-timing-function: cubic-bezier(1, -0.195, 0, 1.33);
+}
+
+.button:hover:before {
+  width: 85%;
+  height: 85%;
+}
+
+.button:active:before,
+.btn:focus:before {
+  width: 100%;
+  height: 100%;
+}
+
+.button-text {
+  margin-left: 190px;
+}
+
+.index-squares {
+  font-family: 'Orchidea Pro';
+  height: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 57vw 46vw;
+}
+
+.index-square1 {
+  background-image: url('/assets/images/index/pillow-on-bed.png');
+  background-size: cover;
+  padding: 1vw;
+  color: white;
+}
+
+.index-square3 {
+  padding: 1vw;
+}
+
+.index-square4 {
+  background-image: url('/assets/images/index/girl-on-bed2.png');
+  background-size: contain;
+}
+
+.index-square3 .button::before {
+  content: '';
+  /* position: absolute; */
+  background: white;
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+  border-radius: 175px;
+  box-shadow: 0px 0px 24px 1px rgba(224, 199, 224, 0.2);
+  transition: all 900ms cubic-bezier(1, -0.195, 0, 1.33);
+  transition-timing-function: cubic-bezier(1, -0.195, 0, 1.33);
+}
+
+.index-square3 .button:hover:before {
+  width: 85%;
+  height: 85%;
+}
+
+.index-square3 .button:active:before,
+.index-square3 .button:focus:before {
+  width: 100%;
+  height: 100%;
+}
+
+.button-text {
+  margin-left: 190px;
+}
+
+.index-square .links {
+  margin-top: 9vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.index-square .link {
+  display: flex;
+  gap: 1vw;
+}
+
+@media (min-width: 1800px) {
+  .index-squares {
+    grid-template-rows: 39vw 32.5vw;
+  }
+
+  .girl-on-bed_image-container .button-1 {
+    top: 14vw;
+    left: 32vw;
+  }
+
+  .girl-on-bed_image-container .button-2 {
+    top: 20vw;
+    left: 46vw;
+  }
+
+  .girl-on-bed_image-container .button-3 {
+    top: 27vw;
+    left: 28vw;
+  }
+
+  .girl-on-bed_image-container .button-4 {
+    top: 33vw;
+    left: 69vw;
+  }
+
+  .girl-on-bed_image-container .button-5 {
+    top: 40vw;
+    left: 25vw;
+  }
+}
