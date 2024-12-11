@@ -1,25 +1,25 @@
 @font-face {
-  font-weight: 500;
-  font-family: 'Orchidea Pro';
-  src: url('../fonts/orchidea-pro/OrchideaPro-Medium.otf');
+    font-weight: 500;
+    font-family: 'Orchidea Pro';
+    src: url('../fonts/orchidea-pro/OrchideaPro-Medium.otf');
 }
 
 @font-face {
-  font-weight: 400;
-  font-family: 'Orchidea Pro';
-  src: url('../fonts/orchidea-pro/OrchideaPro-Regular.otf');
+    font-weight: 400;
+    font-family: 'Orchidea Pro';
+    src: url('../fonts/orchidea-pro/OrchideaPro-Regular.otf');
 }
 
 @font-face {
-  font-weight: 300;
-  font-family: 'Orchidea Pro';
-  src: url('../fonts/orchidea-pro/OrchideaPro-Light.otf');
+    font-weight: 300;
+    font-family: 'Orchidea Pro';
+    src: url('../fonts/orchidea-pro/OrchideaPro-Light.otf');
 }
 
 @font-face {
-  font-weight: 400;
-  font-family: 'Circle';
-  src: url('../fonts/circe/Circe-Regular.woff');
+    font-weight: 400;
+    font-family: 'Circle';
+    src: url('../fonts/circe/Circe-Regular.woff');
 }
 
 @font-face {
@@ -53,6 +53,9 @@ h2 {
 }
 .links-header:first-child {
   margin-left: 30px;
+p {
+  font-family: 'Circle';
+  font-weight: 400;
 }
 
 .links-header {
@@ -64,9 +67,9 @@ h2 {
   color: #72716e;
 }
 
-.links-header:hover {
-  color: black;
-}
+.links-header:hover {color: black;}
+.links-header:first-child {margin-left: 30px;}
+
 
 a {
   font-size: 14px;
@@ -162,3 +165,5 @@ a {
 .card:hover .buy-button {
   display: block; /* Показать кнопку при наведении на карточку */
 }
+
+
