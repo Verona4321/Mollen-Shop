@@ -6,6 +6,10 @@
     <title>Каталог</title>
     <link rel="stylesheet" href="assets/styles/catalog.css">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <!-- Подключение CSS для jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--NoUISlider-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" rel="stylesheet">
 </head>
 <body>
     <aside>
@@ -16,19 +20,78 @@
         <input type="radio"><label for="">Аксессуары</label>
         </div>
         <div class="bedLinen">
+            Размер, см
             <div class="sizes">
-                Размер, см
-                <div class="size">50*70</div><div class="size">50*70</div>
-                <div class="size">50*70</div><div class="size">50*70</div>
+                <div class="size">50*70</div><div class="size">70*70</div>
             </div>
         </div>
+        Принт
+        <div class="choose__print" id="choosePrint">
+            <div class="print"><img src="assets/images/prints/alconost.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/forest.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/homage.png" alt=""></div>
+            <div class="print"><img src="assets/images/prints/korsak.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/forest_1.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/dawn.webp" alt=""></div>
+
+        </div>
+        Цвет
+        <div class="choose__print" id="choosePrint">
+            <div class="print"><img src="assets/images/prints/blue.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/mint.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/cherry.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/nefrit.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/" alt=""></div>
+        </div>
+        Цена, ₽
+
+        <!--СЛАЙДЕР
+        <div class="middle">
+            <div class="multi-range-slider">
+                <input type="range" id="input-left" min="0" max="100" value="25">
+                <input type="range" id="input-right" min="0" max="100" value="75">
+        
+                <div class="slider" id="slider">
+                    <div class="track"></div>
+                    <div class="range"></div>
+                    <div class="thumb thumbleft"></div>
+                    <div class="thumb thumbright"></div>
+                </div>
+        
+            </div>
+        </div>-->
+
+
+        <div class="slider-container">
+            <div id="slider"></div>
+            <div class="value-display">
+                <span id="valueLow">0</span>
+                <span id="valueHigh">0</span>
+            </div>
+        </div>
+        <!---->
+
     </aside>
     <main>
         <a href="index.html" class="links-header">Главная</a> / <a href="" class="links-header">Каталог</a>
         <h1>Постельное  бельё</h1>
-        <div class="catalogMenu">
+        <div class="linen-categories">
+            <div class="category">Наволочки</div>
+            <div class="category">Простыни</div>
+            <div class="category">Пододеяльники</div>
+            <div class="category">Все</div>
+        </div>
+        <div class="products" id="products">
             
         </div>
     </main>
+    
+    <!-- Подключение jQuery через CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
+    <!-- Подключение jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--NoUISlider-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+    <script src="assets/scripts/script.js"></script>
 </body>
 </html>
