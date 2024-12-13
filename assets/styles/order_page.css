@@ -62,11 +62,14 @@ color: #4E76C6;
     padding-left: 0;
 }
 
+.main {
+    border-top: 1px solid #ECEAE7;
+}
 .form {
     display: grid;
     grid-template-columns: 80% 20%;
     grid-template-rows: 160px 1fr;
-    border-top: 1px solid #ECEAE7;
+
 }
 
 .order-info {
@@ -188,7 +191,6 @@ input::placeholder {
     margin-top: 25px;
     margin-right: 25px;
     border-radius: 50px;
-    background-image: url(assets/images/delete.svg);
     background-size: cover;
     border: none;
     align-self: flex-end;
@@ -246,7 +248,7 @@ body {
     color: #72716E;
 }
 
-.circle, .totals__terms-link, .menu-link, .total-price__name, .product-quantity {
+.circle, .totals__terms-link, .menu-link, .total-price__name, .product-quantity, .totals__quantity {
     font-family: "Circe-Light";
     font-weight: 400;
     font-size: 14px;
@@ -264,6 +266,13 @@ body {
     font-family: 'OrchideaPro-Regular';
     font-size: 14px;
     color: #1E1E1E;
+}
+
+.final_btn {
+    text-transform: uppercase;
+    font-family: 'OrchideaPro-Regular';
+    font-size: 14px;
+    color: white;
 }
 
 .user-form-item__title {
@@ -313,4 +322,39 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+/* .errorTwo {
+    border-bottom: 2px solid #CF4F4C;
+} */
+
+
+
+.main_final {
+    border-top: 1px solid #ECEAE7;
+    border-bottom: 1px solid #ECEAE7;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.aside_final {
+
+    background-image: url("../images/index/girl-on-bed2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.final_message {
+    margin-top: 130px;
+    margin-bottom: 30px;
+}
+
+.final_btn {
+    width: 281px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #4E76C6;
+    color: #ECEAE7;
+    border: none;
+    margin-top: 30px;
 }
