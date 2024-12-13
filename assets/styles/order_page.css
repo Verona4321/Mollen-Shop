@@ -1,11 +1,11 @@
 
 @font-face {
-    src: url("assets/fonts/orchidea-pro/OrchideaPro-Regular.otf");
+    src: url("../fonts/orchidea-pro/OrchideaPro-Regular.otf");
     font-family: 'OrchideaPro-Regular';
 }
 
 @font-face {
-    src: url("assets/fonts/circe/Circe-Light.woff");
+    src: url('../fonts/circe/Circe-Light.woff');
     font-family: "Circe-Light";
 }
 
@@ -15,13 +15,6 @@ html {
 
 *, *::after, *::before {
     box-sizing: inherit;
-}
-
-body {
-    font-family: "Circe-Light", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: #72716E;
 }
 
 a {   
@@ -246,7 +239,14 @@ input::placeholder {
     text-transform: uppercase;
 }
 
-.circle, .totals__terms-link, .menu-link, .total-price__name, .product-quantity  {
+body {
+    font-family: "Circe-Light", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #72716E;
+}
+
+.circle, .totals__terms-link, .menu-link, .total-price__name, .product-quantity {
     font-family: "Circe-Light";
     font-weight: 400;
     font-size: 14px;
@@ -266,12 +266,17 @@ input::placeholder {
     color: #1E1E1E;
 }
 
-.user-form-item__title, .option {
+.user-form-item__title {
     font-family: "Circe-Light";
-    font-weight: 400;
     font-size: 18px;
     color: #72716E;
 }
+
+/* #address, #tel, #userSurname, #userName {
+    font-family: "Circe-Light";
+    font-weight: 400;
+    font-size: 18px;
+} */
 
 .input-field::-webkit-input-placeholder {
     font-family: "Circe-Light";
@@ -295,4 +300,17 @@ input::placeholder {
     font-family: "Circe-Light";
     font-weight: 400;
     font-size: 18px;
+}
+
+.error {
+    font-family: "Circe-Light";
+    font-weight: 400;
+    font-size: 14px;
+    color: #CF4F4C;
+}
+
+.user-form-item__input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }

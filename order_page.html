@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="assets/styles/normalize.css">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/order_page.css">
+    <!-- <script defer src="js/jquery-3.7.1.js"></script> -->
+
 </head>
 <body>
     <main class="main">
@@ -52,7 +54,7 @@
                             <div class="user-form-item__title">
                                 <label for="userName">Имя</label>
                             </div>
-                            <div class="user-form-item__input">
+                            <div class="user-form-item__input valid-field">
                                 <input name="userName" class="input-field" type="text" id="userName" placeholder="Иван" minlength="2" maxlength="20" required/>
                                 <span class="error" id="userNameError"></span>
                             </div>
@@ -62,8 +64,8 @@
                             <div class="user-form-item__title">
                                 <label for="userSurname">Фамилия</label>
                             </div>
-                            <div class="user-form-item__input">
-                                <input name="userSurname" class="input-field" type="text" id="userSurname" placeholder="Иванов" minlength="2" maxlength="20" required/>
+                            <div class="user-form-item__input valid-field">
+                                <input name="userSurname" class="input-field" type="text" id="userSurname" placeholder="Иванов" minlength="2" maxlength="50" required/>
                                 <span class="error" id="userSurnameError"></span>
                             </div>
                         </div>
@@ -72,8 +74,8 @@
                             <div class="user-form-item__title">
                                 <label for="tel">Телефон</label>
                             </div>
-                            <div class="user-form-item__input">
-                                <input name="tel" id="tel" type="tel" class="input-field" placeholder="+ 7 (____)  _____  -  ___  -  ___" maxlength="16" name="phone" pattern="[0-9]{10}" required/>
+                            <div class="user-form-item__input valid-field">
+                                <input name="tel" id="tel" name="tel" type="text" class="input-field" placeholder="+ 7 (_____)  _____  -  ___  -  ___" maxlength="16" name="phone" required/>
                                 <span class="error" id="telError"></span>
                             </div>
                         </div>
@@ -107,7 +109,7 @@
                             <div class="user-form-item__title">
                                 <label for="address">Адрес</label>
                             </div>
-                            <div class="user-form-item__input">
+                            <div class="user-form-item__input valid-field">
                                 <input name="address" class="input-field" type="text" id="address" placeholder="Улица, дом, квартира" minlength="2" maxlength="50" required/>
                                 <span class="error" id="addressError"></span>
                             </div>
@@ -255,18 +257,24 @@
             </div>
             <button class="totals__btn" type="submit">Оплатить</button>
 
-            <div class="totals__terms">
+            <div class="totals__terms valid-field">
                 <input type="checkbox"  name="agreeTerms" id="agreeTerms" required/>
-                <label for="agreeTerms"><span class="circle">Я согласен на </span><a class="totals__terms-link" href="#">обработку персональных данных и публичной офертой</a></label>
-                <span class="error" id="termsError"></span>
+                <label for="agreeTerms">
+                    <span class="circle">Я согласен на </span>
+                    <a class="totals__terms-link" href="#">обработку персональных данных и публичной офертой</a>
+                </label>
+                <div id="termsError"></div>
             </div>
             </div>
         </section>
         </form>
     </main>
-    <script src='cleave.min.js'></script>
-    <script src='cleave-phone.ru.js'></script>
-    <script src='order_page.js'></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    <script src='script/cleave.min.js'></script>
+    <script src='script/cleave-phone.ru.js'></script>
+    <script src='script/order_page.js'></script>
+
     
 </body>
 </html>
