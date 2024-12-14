@@ -10,21 +10,22 @@ async function displayProducts() {
 
     const products = await response.json();
 
-    products.forEach((product) => {
+    for (let i = 0; i <= 5; i++) {
+      // products.forEach((product) => {
       const card = document.createElement('div');
-      card.classList.add('card');
+      card.classList.add('index-card');
       card.innerHTML = `
-  <div class="icon"><img src="${product.icon}" class="icon-image"></div>
-  <img src="${product.image}" class="product-image">
-  <h2 class="product-name">${product.name}</h2>
-  <div class="availability">${product.availability}</div>
-  <div class="price">${product.price} ₽</div>
+  <div class="icon"><img src="${products[i].icon}" class="icon-image"></div>
+  <img src="${products[i].image}" class="product-image">
+  <h2 class="product-name">${products[i].name}</h2>
+  <div class="availability">${products[i].availability}</div>
+  <div class="price">${products[i].price} ₽</div>
   <button class="buy-button">В корзину</button>
   `;
       container.appendChild(card);
 
       //const print = document.createElement('div');
-    });
+    }
   } catch (error) {
     console.error('Ошибка', error);
     container.innerHTML =

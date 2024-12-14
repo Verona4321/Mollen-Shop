@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="assets/styles/header-footer.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- Левая группа -->
+        <div class="left-group">
+            <div class="burger-menu">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="logo">
+                <a href="/home"><img src="assets/icons/header/mollen.png" alt="Logo"></a>
+            </div>
+            <div class="catalog">
+                <a href="/catalog">КАТАЛОГ</a>
+            </div>
+        </div>
+    
+        <!-- Правая группа -->
+        <div class="right-group">
+            <div class="search-icon">
+                <!-- Иконка для полной версии -->
+                <a href="/search" class="full-screen-icon">
+                    <img src="assets/icons/header/search_full.png" alt="Search">
+                    <span>ПОИСК</span>
+                </a>
+                <!-- Иконка для мобильной версии -->
+                <a href="/search" class="mobile-icon">
+                    <img src="assets/icons/header/search.png" alt="Search">
+                </a>
+            </div>
+            <div class="bed-icon">
+                <!-- Иконка для полной версии -->
+                <a href="/bed" class="full-screen-icon">
+                    <img src="assets/icons/header/bed-full.png" alt="Bed">
+                    <span>КОНСТРУКТОР</span>
+                </a>
+                <!-- Иконка для мобильной версии -->
+                <a href="/bed" class="mobile-icon">
+                    <img src="assets/icons/header/bed.png" alt="Bed">
+                </a>
+            </div>
+            <div class="shopping-bag">
+                <a href="/cart">
+                    <img src="assets/icons/header/shopping_bag2.png" alt="Shopping Bag">
+                </a>
+                <span class="circle"></span>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="product-page">
+    <nav class="breadcrumbs">
+        <a href="/home">Главная</a> / <a href="/catalog">Каталог</a> / <a href="/catalog/linen">Постельное белье</a> / Наволочка двусторонняя
+    </nav>
+
+    <div class="product-container">
+        <div class="product-images">
+            <div class="main-image">
+                <img src="assets/images/product page/main.png" alt="Main Product Image">
+            </div>
+            <div class="thumbnail-images">
+                <img src="assets/images/product page/side-pic.png" alt="Thumbnail 1">
+                <img src="assets/images/product page/side-pic.png" alt="Thumbnail 2">
+                <img src="assets/images/product page/side-pic.png" alt="Thumbnail 3">
+                <img src="assets/images/product page/side-pic.png" alt="Thumbnail 4">
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h1 class="product-title">НАВОЛОЧКА ДВУХСТОРОННЯЯ</h1>
+            <p class="product-id">ID: 23452265</p>
+            <p class="product-description">
+                Наволочка двусторонняя: светло-серый сатин и шелк с узором "волшебный лес" 50*70 см
+            </p>
+            <p class="product-price">18 000₽</p>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="quantity-minus">-</button>
+                    <input type="number" value="1" min="1" class="quantity-input">
+                    <button class="quantity-plus">+</button>
+                </div>
+                <button class="add-to-cart">В КОРЗИНУ</button>
+                <button class="quick-buy">БЫСТРАЯ ПОКУПКА</button>
+            </div>
+            <div class="product-options">
+                <div class="option">
+                    <label for="size">Размер, см</label>
+                    <select id="size">
+                        <option value="50x70">50*70</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <label for="fabric">Ткань</label>
+                    <select id="fabric">
+                        <option value="fabric-name">название ткани</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <label for="print">Принт</label>
+                    <div id="print">
+                        <img src="assets/images/print_1.jpg" alt="Print 1">
+                        <img src="assets/images/print_2.jpg" alt="Print 2">
+                        <img src="assets/images/print_3.jpg" alt="Print 3">
+                    </div>
+                </div>
+                <div class="option">
+                    <label for="colors">Цвета</label>
+                    <div id="colors">
+                        <span class="color-option" style="background-color: #FFD700;"></span>
+                        <span class="color-option" style="background-color: #FF4500;"></span>
+                        <span class="color-option" style="background-color: #00FF7F;"></span>
+                        <span class="color-option" style="background-color: #1E90FF;"></span>
+                        <span class="color-option" style="background-color: #FF69B4;"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="additional-links">
+                <a href="#">РАЗМЕРНЫЙ ГИД</a>
+                <a href="#">УСЛОВИЯ ДОСТАВКИ</a>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <!-- Левая часть -->
+        <div class="footer-content">
+            <!-- Левая часть -->
+            <div class="footer-left">
+                <img src="assets/icons/footer/mollen_white.png" alt="Mollen Logo" class="footer-logo">
+                <!-- Новый div для текста -->
+                <div class="copyright">
+                    <p>2021 &copy; Mollen.<br>Все права защищены.</p>
+                </div>
+            </div>
+
+        <!-- Центральная часть -->
+        <div class="footer-center">
+            <ul>
+                <li><a href="#">Постельное белье</a></li>
+                <li><a href="#">Одежда</a></li>
+                <li><a href="#">Ароматы</a></li>
+                <li><a href="#">Аксессуары</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Размерный гид</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Гарантия и возврат</a></li>
+                <li><a href="#">Частые вопросы</a></li>
+            </ul>
+        </div>
+
+        <!-- Правая часть -->
+        <div class="footer-right">
+            <p><strong>8 800 222 22 22</strong></p>
+            <a href="#">Заказать звонок</a>
+            <div class="social-icons">
+                <a href="#" class="icon vk"><img src="assets/icons/footer/vk.png" alt="VK"></a>
+                <a href="#" class="icon pinterest"><img src="assets/icons/footer/pinterest.png" alt="Pinterest"></a>
+                <a href="#" class="icon telegram"><img src="assets/icons/footer/telegram.png" alt="Telegram"></a>
+                <a href="#" class="icon facebook"><img src="assets/icons/footer/facebook.png" alt="Facebook"></a>
+                <a href="#" class="icon youtube"><img src="assets/icons/footer/youtube.png" alt="YouTube"></a>
+                <a href="#" class="icon instagram"><img src="assets/icons/footer/instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

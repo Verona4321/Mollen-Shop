@@ -100,6 +100,25 @@
   color: white;
 }
 
+.index-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.9fr 0.9fr 0.9fr;
+}
+
+.index-card {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  text-align: center;
+  border: 1px solid rgba(236, 234, 231, 1);
+}
+
 .index-square3 {
   padding: 1vw;
 }
@@ -152,6 +171,10 @@
 @media (min-width: 1800px) {
   .index-squares {
     grid-template-rows: 39vw 32.5vw;
+  }
+
+  .index-products {
+    grid-template-rows: 1fr 1fr;
   }
 
   .girl-on-bed_image-container .button-1 {
