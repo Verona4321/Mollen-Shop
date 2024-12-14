@@ -19,7 +19,7 @@ async function displayProducts() {
     <h2 class="product-name">${product.name}</h2>
     <div class="availability">${product.availability}</div>
     <div class="price">${product.price} ₽</div>
-    <button class="buy-button">В корзину</button>
+    <button class="buy-button">Подробнее</button>
     `;
     container.appendChild(card);
 
@@ -36,206 +36,15 @@ async function displayProducts() {
 
 
 
-
-
-
-
-// async function fetchProducts() {
-//     try {
-//         const response = await fetch('D:/Projects/Mollen-Shop/catalog.json'); 
-//         if (!response.ok) {
-//             throw new Error('Ошибка');
-//         }
-//         const catalog = await response.json();
-//         displayProducts(catalog);
-//     } catch (error) {
-//         console.error('Ошибка при загрузке данных:', error);
-//     }
-// }
-
-// function displayProducts(catalog) {
-//     const container = document.getElementById('products');
-//     //container.innerHTML = ''; 
-//     catalog.forEach(product => {
-//         const card = document.createElement('div');
-//         card.classList.add('product-card');
-//         card.innerHTML = `
-//             <h2>${product.name}</h2>
-//             <p>Цена: ${product.price}</p>
-//         `;
-//         container.appendChild(card);
-//     });
-// }
-
-// // Вызов функции при загрузке страницы
-// window.onload = fetchProducts;
-
-
-
-
-
-// async function loadJSON() {
-//     try {
-//         const response = await fetch('assets/json/catalog.json'); // Путь к JSON файлу
-//         // if (!response.ok) {
-//         //     throw new Error('Сеть не отвечает: ' + response.status);
-//         // }
-//         const products = await response.json(); // Парсинг данных
-
-//         // Вызываем функцию для отображения товаров
-//         displayProducts(products);
-//     } catch (error) {
-//         console.error('Ошибка загрузки JSON:', error);
-//     }
-// }
-
-// function displayProducts(products) {
-//     const productsContainer = document.getElementById('products');
-    
-//     // Очистка контейнера перед добавлением новых товаров
-//     //productsContainer.innerHTML = '';
-
-//     products.forEach(product => {
-//         const productDiv = document.createElement('div'); // Создаём новый див для товара
-//         productDiv.className = 'product'; // Добавляем класс для стилевой обработки
-//         productDiv.innerHTML = `
-//             <h2>${product.name}</h2>
-//             <p>${product.description}</p>
-//             <p>Цена: ${product.price} руб.</p>
-//         `; // Формируем HTML для одного товара
-//         productsContainer.appendChild(productDiv); // Добавляем товар в контейнер
-//     });
-// }
-
-// // Вызов функции при загрузке страницы
-// window.onload = loadJSON;
-
-
-
-
-
-// function displayProducts() {
-//     const response = await fetch('assets/json/catalog.json');
-//     const container = document.getElementById('products');
-//     catalog.forEach(product => {
-//         const card = document.createElement('div');
-//         card.innerHTML = `
-//             <h2>${catalog.name}</h2>
-//             <p>${catalog.price}</p>
-//         `;
-//         container.appendChild(card);
-//     });
-// }
-
-// // Вызов функции при загрузке страницы
-// window.onload = displayProducts;
-
-
-
-
-/*
-var inputLeft = document.getElementById("input-left");
-var inputRight = document.getElementById("input-right");
-
-var thumbLeft = document.querySelector(".slider > .thumb.thumbleft");
-var thumbRight = document.querySelector(".slider > .thumb.thumbright");
-var range = document.querySelector(".slider > .range");
-
-function setLeftValue() {
-	var _this = inputLeft,
-		min = parseInt(_this.min),
-		max = parseInt(_this.max);
-
-	_this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
-
-	var percent = ((_this.value - min) / (max - min)) * 100;
-
-	thumbLeft.style.left = percent + "%";
-	range.style.left = percent + "%";
-}
-setLeftValue();
-
-function setRightValue() {
-	var _this = inputRight,
-		min = parseInt(_this.min),
-		max = parseInt(_this.max);
-
-	_this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
-
-	var percent = ((_this.value - min) / (max - min)) * 100;
-
-	thumbRight.style.right = (100 - percent) + "%";
-	range.style.right = (100 - percent) + "%";
-}
-setRightValue();
-
-inputLeft.addEventListener("input", setLeftValue);
-inputRight.addEventListener("input", setRightValue);
-
-inputLeft.addEventListener("mouseover", function() {
-	thumbLeft.classList.add("hover");
-});
-inputLeft.addEventListener("mouseout", function() {
-	thumbLeft.classList.remove("hover");
-});
-inputLeft.addEventListener("mousedown", function() {
-	thumbLeft.classList.add("active");
-});
-inputLeft.addEventListener("mouseup", function() {
-	thumbLeft.classList.remove("active");
-});
-
-inputRight.addEventListener("mouseover", function() {
-	thumbRight.classList.add("hover");
-});
-inputRight.addEventListener("mouseout", function() {
-	thumbRight.classList.remove("hover");
-});
-inputRight.addEventListener("mousedown", function() {
-	thumbRight.classList.add("active");
-});
-inputRight.addEventListener("mouseup", function() {
-	thumbRight.classList.remove("active");
-});
-*/
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    var slider = document.getElementById('slider');
-    if (!slider) {
-        noUiSlider.create(slider, {
-            start: [20, 80],   // Начальные позиции рукояток
-            connect: true,     // Указывает на соединение между рукоятками
-            range: {
-                'min': 0,      // Минимальное значение слайдера
-                'max': 100     // Максимальное значение слайдера
-            },
-            step: 1,           // Шаг изменения значений
-            tooltips: [true, true], // Показывать подсказки над рукоятками
-            format: {
-                to: function (value) {
-                    return value.toFixed(1);  // Форматирование значения с одним десятичным знаком
-                },
-                from: function (value) {
-                    return Number(value);
-                }
-            }
-        });
-    } else {
-        console.error('Слайдер не найден');
-    }
-});
-
-
+//ПОЛЗУНОК ЦЕН
 var slider = document.getElementById('slider');
 
     noUiSlider.create(slider, {
-        start: [15000, 15000],
+        start: [3000, 6000],
         connect: true,
         range: {
             'min': 0,
-            'max': 30000
+            'max': 10000
         },
         step: 1000
     });
@@ -251,3 +60,76 @@ var slider = document.getElementById('slider');
         }
     });
 
+
+
+
+//ВЫБОР КАТЕГОРИИ ТОВАРОВ
+
+document.addEventListener("DOMContentLoaded", function Sort() {
+    const categories = document.querySelectorAll(".category");
+    const products = document.querySelectorAll(".product");
+    console.log(products);
+
+    categories.forEach((category) => {
+        category.addEventListener("click", function () {
+            const selectedCategory = this.getAttribute("data-category");
+
+            // Убираем выделение со всех категорий
+            categories.forEach((cat) => cat.classList.remove("selected"));
+            // Добавляем выделение на выбранную категорию
+            this.classList.add("selected");
+
+            products.forEach((product) => {
+                if (selectedCategory === "all") {
+                    // Показывать все товары
+                    product.classList.remove("hidden");
+                } else {
+                    // Показать только товары выбранной категории
+                    if (product.getAttribute("data-category") === selectedCategory) {
+                        product.classList.remove("hidden");
+                    } else {
+                        product.classList.add("hidden");
+                    }
+                }
+            });
+        });
+    });
+});
+
+window.onload = Sort;
+
+
+
+//В зависимости от категории отображаем доступные размеры для этой категории
+document.addEventListener('DOMContentLoaded', function() {
+    const categories = document.querySelectorAll('.category');
+    const sizeSections = {
+        pillows: document.getElementById('sizes_pillowcases'),
+        sheets: document.getElementById('sizes_sheets'),
+        duvetCovers: document.getElementById('sizes_duvet-covers')
+    };
+
+    categories.forEach(category => {
+        category.addEventListener('click', function() {
+            const id = this.id;
+            
+            // Сначала скрываем все секции размера
+            for (let key in sizeSections) {
+                if (sizeSections.hasOwnProperty(key)) {
+                    sizeSections[key].style.display = 'none';
+                }
+            }
+
+            // Показать соответствующую секцию или все, если выбрано "Все"
+            if (id === 'all') {
+                for (let key in sizeSections) {
+                    if (sizeSections.hasOwnProperty(key)) {
+                        sizeSections[key].style.display = 'block';
+                    }
+                }
+            } else {
+                sizeSections[id].style.display = 'block';
+            }
+        });
+    });
+});

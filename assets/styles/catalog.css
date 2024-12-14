@@ -50,6 +50,15 @@ h1 {
     font-size: 14px;
 }
 
+.category.selected {
+    color: #1E1E1E;
+    background-color: #F5F3F0;
+}
+
+.hidden {
+    display: none;
+}
+
 .size {
     border:  1px solid rgba(236,  234,  231, 1);
     font-size: 14px;
@@ -76,6 +85,10 @@ h1 {
     margin-top: 20px;
 }
 
+.sizes > div {
+    display: none;
+}
+
 .choose__print{
     background-color: #F5F3F0;
     border-radius: 5px;
@@ -85,7 +98,7 @@ h1 {
     padding: 10px;
     align-content: center;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
 }
 
@@ -175,9 +188,11 @@ input[type=range]::-webkit-slider-thumb {
 
 
     .slider-container {
-        width: 300px;
-        margin: 50px auto;
+        width: 90%;
+        margin-right: 30px;
+        margin-top: 20px;
     }
+
     .value-display {
         display: flex;
         justify-content: space-between;
@@ -188,3 +203,66 @@ input[type=range]::-webkit-slider-thumb {
         border-radius: 5px;
         background-color: #f2f2f2;
     }
+
+    /* Задаём толщину для самого трека слайдера */
+    #sliderContainer .noUi-target {
+    height: 5px;
+    /* Толщина слайдера */
+    background-color: #ddd;
+    /* Цвет фона трека (можно изменить) */
+    border: none;
+    /* Удаляем стандартные границы */
+    box-shadow: none;
+    /* Удаляем тени */
+}
+
+/* Стилизация линии, заполняющей слайдер */
+#sliderContainer .noUi-connect {
+    background: #4E76C6;
+    /* Цвет заполненной части слайдера */
+    height: 5px;
+    /* Эта толщина должна совпадать с треком */
+}
+
+/* Ползунок (ползунок может иметь различные стили, в зависимости от визуальных предпочтений) */
+#sliderContainer .noUi-handle {
+    width: 18px;
+    /* Ширина ползунка */
+    height: 18px;
+    /* Высота ползунка */
+    border-radius: 50%;
+    /* Делает ползунок круглым */
+    background-color: #fff;
+    /* Цвет ползунка */
+    border: 2px solid #4E76C6;
+    /* Граница для контраста с треком */
+    box-shadow: none;
+    /* Убираем тень */
+}
+
+/* Чтобы ползунок был на одном уровне с треком */
+.noUi-handle:before,
+.noUi-handle:after {
+    display: none;
+}
+
+
+.sort {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Circle';
+    color: #1E1E1E;
+    font-weight: 300;
+    height: 80px;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.sort__parametres {
+    width: 250px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-left: 50px;
+    
+}
