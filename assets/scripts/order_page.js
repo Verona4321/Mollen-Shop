@@ -35,7 +35,7 @@ const json = [
         "quantity": 3
     }
 ]
-// Товары в корзине (локал стореж):
+// Товары в корзине (локал стореж) для примера:
 
 const json2 = JSON.stringify(json)
 window.localStorage.setItem('cart', json2);
@@ -54,9 +54,9 @@ window.localStorage.setItem('wrapping', true);
     const pickupOption = document.getElementById('pickupOption')
     const deliveryOption = document.getElementById('deliveryOption')
     const totalOrderPrice = document.querySelector('.total-price__result')    
+    const body = document.querySelector('.body');
 
-
-// Загрузка товаров из ЛС:   
+// Рендер корзины из локал стореж:   
 
 function renderProductCart (item) {
     const div = document.createElement("div")
@@ -76,9 +76,7 @@ productList.forEach(product => {
     })
 
 
-
-
-//Подсчет итогов:
+//Подсчет и рендер итогов:
 
 countTotals = () => {
     let resultPrice = 0;
@@ -121,10 +119,10 @@ deliveryBtn.forEach(function (btn) {
 
 
 //   Валидация формы:
+
 const myForm = document.forms[0];
 const formElements = myForm.elements;
 const button = document.querySelector('.totals__btn');
-// button.setAttribute('disabled', true);
 
 var cleave = new Cleave('#tel', {
     phone: true,
@@ -133,34 +131,34 @@ var cleave = new Cleave('#tel', {
 
 document.addEventListener("DOMContentLoaded", (event) => {
 
-$(".form").validate({
-    rules: {
-    userName: { required: true, minlength: 2 },
-    userSurname: { required: true, minlength: 2 },
-    address: {required: true, minlength: 8},
-    agreeTerms: {required: true},
-    tel: {required: true, minlength: 13},
-    },
-    messages: {
-        userName: {
-            required: "Обязательное поле",
-            minlength: jQuery.validator.format("Имя должно содержать минимум 2 символа"),
-            },
-        userSurname: {
-            required: "Обязательное поле",
-            minlength: jQuery.validator.format("Фамилия должна содержать минимум 2 символа"),
-            },
-            address: {
-            required: "Обязательное поле",
-            minlength: jQuery.validator.format("Укажите ваш адрес")
-            },
-        agreeTerms: {
-            required: "Подтвердите согласие на обработку данных",
-            },
-        tel: { 
-            required: "Обязательное поле",
-            },
+    $(".form").validate({
+        rules: {
+        userName: { required: true, minlength: 2 },
+        userSurname: { required: true, minlength: 2 },
+        address: {required: true, minlength: 8},
+        agreeTerms: {required: true},
+        tel: {required: true, minlength: 13},
         },
+        messages: {
+            userName: {
+                required: "Обязательное поле",
+                minlength: jQuery.validator.format("Имя должно содержать минимум 2 символа"),
+                },
+            userSurname: {
+                required: "Обязательное поле",
+                minlength: jQuery.validator.format("Фамилия должна содержать минимум 2 символа"),
+                },
+                address: {
+                required: "Обязательное поле",
+                minlength: jQuery.validator.format("Укажите ваш адрес")
+                },
+            agreeTerms: {
+                required: "Подтвердите согласие на обработку данных",
+                },
+            tel: { 
+                required: "Обязательное поле",
+                },
+            },
     errorPlacement: function (e, i) {
         e.appendTo(i.closest(".valid-field"));
         },
@@ -170,86 +168,46 @@ jQuery.extend(jQuery.validator.messages, { required: "Обязательное �
 
 })
 
-// $(document).ready(function() {
-//     $('.form').on('submit', function(evt) {
-//         evt.preventDefault();
-//     })
-// })
 
+// Функция сбора данных формы и корзины:
 
+let data = {};
+const createData = () => {
 
-
-// $('#myform').on('submit', function(event) {
-//     event.preventDefault();
-
-//         this.submit();
+    $.each($('.form').serializeArray(), function(i, field) {
+        data[field.name] = field.value;
+    });
     
-// });
+    data.products = localStorage.getItem('cart');
+    data.wrapping = localStorage.getItem('wrapping');
+return data;
+};
 
 
-// const inputFields = document.querySelectorAll('.input-field');
-// console.log(inputFields);
+// Отправка данных формы и корзины на сервер:
 
-// inputFields.forEach(function (input) {
-//         input.addEventListener('blur', function () {        
+myForm.addEventListener('submit', function (evt) {
+    evt.preventDefault();
 
-//         })
+    createData();
 
-//     })
+    fetch('<https://api.citygridmedia.com>', {
+    method: 'POST',
+    body: JSON.stringify(data)})
 
+    .then((res) => {
+        return res.json(); 
+    })
+	.then(res => {
+        if (res.ok) {
+            body.textContent = 'Форма отправилась';
+        }
+        else { 
+            body.textContent = 'Заказ не был отпрвлен'
+        }
+    })
 
-
-
-// inputFields.addEventListener('blur', function () {
-//     let mass= [];
-//     for(let inp of inputFields) {
-//       if (inp.classList.contains('error')) {
-//         mass = mass + 1;
-//         };
-//         };
-//         console.log(mass)
-//     if (mass.length === 0){
-//         button.setAttribute('disabled', true);
-//     }
-// })
-
-
-// let mass= [];
-
-// inputFields.forEach(function (input) {
-//     input.addEventListener('blur', function () {        
-//       if (input.classList.contains('error')) {
-//         mass = mass + 1;
-//         };})
-//         console.log(mass.length)
-//     })
-//     if (mass.length === 0){
-//             button.setAttribute('disabled', false);
-//     }
-
-// 
-//     input.addEventListener('focus', function () {
-//         parent.style.border = '2px solid black'; //Изменение границы при фокусе
-
-//     });
-//     input.addEventListener('blur', function () {
-//         input.style.border = ''; //Восстановление стандартной границы после потери фокуса
-//         parent.classList.add('errorTwo')
-//     });
-// });
-
-
-
-
-// document.myForm.addEventListener('submit', (evt) => {
-//     evt.preventDefault();
-//     console.log(`Имя: ${userName.value},
-//         почта: ${email.value}, 
-//         возраст: ${age.value}, 
-//         пол: ${gender}, 
-//         возраст: ${age.value}, 
-//         профессия: ${job.selectedIndex.value}`)
-//     myForm.reset()
-//     button.setAttribute('disabled', true);
-//     }
-// );
+    .catch((err) => {
+        body.textContent = 'Что то пошло не так, повторите попытку'
+    })
+});
