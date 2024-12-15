@@ -23,29 +23,30 @@
 }
 
 @font-face {
-  font-weight: 300;
-  font-family: 'Circle';
-  src: url('../fonts/circe/Circe-Light.woff');
+    font-weight: 300;
+    font-family: 'Circle';
+    src: url('../fonts/circe/Circe-Light.woff');
 }
 
 body {
-  padding: 5vw;
+    padding: 5vw;
 }
 
 h1,
 h2 {
-  text-transform: uppercase;
-  font-family: 'Orchidea Pro';
-  font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Orchidea Pro';
+    font-weight: 500;
 }
 
 h1 {
-  font-size: 40px;
-  color: #1e1e1e;
+    font-size: 40px;
+    color: #1e1e1e;
 }
+
 h2 {
-  font-size: 14px;
-  color: #1e1e1e;
+    font-size: 14px;
+    color: #1e1e1e;
 }
 
 .links-header:hover {
@@ -53,18 +54,20 @@ h2 {
 }
 .links-header:first-child {
   margin-left: 30px;
+}
+
 p {
-  font-family: 'Circle';
-  font-weight: 400;
+    font-family: 'Circle';
+    font-weight: 400;
 }
 
 .links-header {
-  /*Это стили для ссылок вверху над заголовками*/
-  font-family: 'Circle';
-  font-weight: 300;
-  font-size: 14px;
-  text-decoration: none;
-  color: #72716e;
+    /*Это стили для ссылок вверху над заголовками*/
+    font-family: 'Circle';
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: none;
+    color: #72716e;
 }
 
 .links-header:hover {color: black;}
@@ -72,14 +75,14 @@ p {
 
 
 a {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 1800px) {
-  body {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
 
 .products {
