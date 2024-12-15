@@ -209,14 +209,15 @@ $(document).ready(function() {
 
 // Отправка формы
 
-form.addEventListener ("submit", function(e) {
+form.addEventListener ("submit", async(e) => {
     e.preventDefault();
 
-    createData()
+    createData();
 
-    fetch('http://localhost:3000/orders', {
-        method: 'POST',
-        body: JSON.stringify(data)})
+
+            const response = await fetch('http://localhost:3000/orders', {
+            method: 'POST',
+            body: JSON.stringify(data)})
                         // .then((res) => {
                         //     return res.json(); 
                         //     })
@@ -264,7 +265,9 @@ form.addEventListener ("submit", function(e) {
             .catch((err) => {
                 body.textContent = 'Что то пошло не так, повторите попытку';
                     })
-            })
+            // .finally(( ))
+            }
+        );
     
         
 
