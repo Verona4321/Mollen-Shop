@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('There has been a problem with your fetch operation:', error);
         });
 
-    // Функция, которая отображает товары
+    // Функция, которая отображает продукты в виде списка
     function displayProducts(products) {
 
         // Удаляем существующие элементы списка (если есть)

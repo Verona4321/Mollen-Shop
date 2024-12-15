@@ -49,6 +49,13 @@ h2 {
     color: #1e1e1e;
 }
 
+.links-header:hover {
+  color: black;
+}
+.links-header:first-child {
+  margin-left: 30px;
+}
+
 p {
     font-family: 'Circle';
     font-weight: 400;
@@ -79,87 +86,87 @@ a {
 }
 
 .products {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    /*justify-content: space-between;*/
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /*justify-content: space-between;*/
 }
 
 .card {
-    width: calc(99.54% / 2.9999999);
-    text-align: center;
-    border:  1px solid rgba(236,  234,  231, 1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+  width: calc(99.54% / 2.9999999);
+  text-align: center;
+  border: 1px solid rgba(236, 234, 231, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .icon {
-    width: 30px;
-    height: 35px;
-    margin-left: 70%;
-    margin-bottom: 40px;
+  width: 30px;
+  height: 35px;
+  margin-left: 70%;
+  margin-bottom: 40px;
 }
 
 .icon-image {
-    width: 30px;
-    height: 35px;
-    border-radius: 5px;
+  width: 30px;
+  height: 35px;
+  border-radius: 5px;
 }
 
 .product-name {
-    width: 60%;
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 20px;
+  width: 60%;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 20px;
 }
 
 .product-image {
-    width: 170px;
+  width: 170px;
 }
 
 .price {
-    font-family: 'Orchidea Pro';
-    font-weight: 400;
-    font-size: 22px;
-    color: #1E1E1E;
-    margin-top: 15px;
+  font-family: 'Orchidea Pro';
+  font-weight: 400;
+  font-size: 22px;
+  color: #1e1e1e;
+  margin-top: 15px;
 }
 
 .availability {
-    font-family: 'Orchidea Pro';
-    font-weight: 300;
-    color: #72716E;
+  font-family: 'Orchidea Pro';
+  font-weight: 300;
+  color: #72716e;
 }
 
 .buy-button {
-    display: none; /* Скрыть кнопку по умолчанию */
-    background-color: #4E76C6; 
-    color: white; 
-    border: none; 
-    border-radius: 20px; 
-    padding: 10px 20px; 
-    cursor: pointer; /* Изменение курсора при наведении */
-    margin-top: 15px;
-    width: 40%;
-    height: 40px;
-    text-transform: uppercase;
-    font-family: 'Orchidea Pro';
-    font-size: 14px;
+  display: none; /* Скрыть кнопку по умолчанию */
+  background-color: #4e76c6;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer; /* Изменение курсора при наведении */
+  margin-top: 15px;
+  width: 40%;
+  height: 40px;
+  text-transform: uppercase;
+  font-family: 'Orchidea Pro';
+  font-size: 14px;
 }
 
 .card:hover {
-    transform: scale(1.2); /* Увеличение карточки при наведении */
-    background-color: white;
-    cursor: pointer;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: scale(1.2); /* Увеличение карточки при наведении */
+  background-color: white;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .card:hover .buy-button {
-    display: block; /* Показать кнопку при наведении на карточку */
+  display: block; /* Показать кнопку при наведении на карточку */
 }
 
 
