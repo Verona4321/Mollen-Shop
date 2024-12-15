@@ -10,7 +10,7 @@ async function displayProducts() {
 
     const products = await response.json();
 
-    for (let i = 0; i <= 5; i++) {
+    for (let i = 0; i <= 3; i++) {
       // products.forEach((product) => {
       const card = document.createElement('div');
       card.classList.add('index-card');
@@ -20,7 +20,7 @@ async function displayProducts() {
   <h2 class="product-name">${products[i].name}</h2>
   <div class="availability">${products[i].availability}</div>
   <div class="price">${products[i].price} ₽</div>
-  <button class="buy-button">В корзину</button>
+  <button class="buy-button">Подробнее</button>
   `;
       container.appendChild(card);
 
