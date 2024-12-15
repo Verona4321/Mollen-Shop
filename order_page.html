@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="assets/styles/normalize.css">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/order_page.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+    <script src="https://malsup.github.io/jquery.form.js"></script>  -->
 </head>
 <body class ="body">
     <main class="main">
 
-        <form class="form">
+        <form class="form" action = "http://localhost:3000/orders">
 
             <section class="menu-container">
                 <nav class="menu">
@@ -53,7 +55,7 @@
                                 <label for="userName">Имя</label>
                             </div>
                             <div class="user-form-item__input valid-field">
-                                <input name="userName" class="input-field" type="text" id="userName" placeholder="Иван" minlength="2" maxlength="20" required/>
+                                <input name="userName" class="input-field checkValidate" type="text" id="userName" placeholder="Иван" minlength="2" maxlength="20" required/>
                                 <span class="error" id="userNameError"></span>
                             </div>
                         </div>
@@ -63,7 +65,7 @@
                                 <label for="userSurname">Фамилия</label>
                             </div>
                             <div class="user-form-item__input valid-field">
-                                <input name="userSurname" class="input-field" type="text" id="userSurname" placeholder="Иванов" minlength="2" maxlength="50" required/>
+                                <input name="userSurname" class="input-field checkValidate" type="text" id="userSurname" placeholder="Иванов" minlength="2" maxlength="50" required/>
                                 <span class="error" id="userSurnameError"></span>
                             </div>
                         </div>
@@ -73,7 +75,7 @@
                                 <label for="tel">Телефон</label>
                             </div>
                             <div class="user-form-item__input valid-field">
-                                <input name="tel" id="tel" name="tel" type="text" class="input-field" placeholder="+ 7 (_____)  _____  -  ___  -  ___" maxlength="16" name="phone" required/>
+                                <input name="tel" id="tel" name="tel" type="text" class="input-field checkValidate" placeholder="+ 7 (_____)  _____  -  ___  -  ___" maxlength="16" name="phone" required/>
                                 <span class="error" id="telError"></span>
                             </div>
                         </div>
@@ -108,16 +110,13 @@
                                 <label for="address">Адрес</label>
                             </div>
                             <div class="user-form-item__input valid-field">
-                                <input name="address" class="input-field" type="text" id="address" placeholder="Улица, дом, квартира" minlength="2" maxlength="50" required/>
+                                <input name="address" class="input-field checkValidate" type="text" id="address" placeholder="Улица, дом, квартира" minlength="2" maxlength="50" required/>
                                 <span class="error" id="addressError"></span>
                             </div>
                         </div>
                     </div>
                     </div>
 
-
-
-                
                     <div class="order-info__subtitle">
                         <h2>Доставка</h2>
                     </div>
@@ -198,38 +197,6 @@
                     </div>
 
                     <div class="order-info__card-products-list">
-
-                        <!-- <div class="card-products-list-item">
-                            <button type="button" class="delete-item__btn">
-                            </button>
-                            <div class="product-img">
-                                <img src="assets/images/Mask_Group.svg" class="product-img__img">
-                            </div>
-                            <div class="product-name">название товара в две строки</div>
-                            <div class="product-quantity"><span>2</span><span>шт</span></div>
-                            <div class="product-price">15000&#8381</div>
-                        </div>
-                        <div class="card-products-list-item">
-                            <button type="button" class="delete-item__btn">
-                            </button>
-                            <div class="product-img">
-                                <img src="assets/images/Mask_Group.svg" class="product-img__img">
-                            </div>
-                            <div class="product-name">название товара в две строки</div>
-                            <div class="product-quantity"><span>2</span><span>шт</span></div>
-                            <div class="product-price">10000&#8381</div>
-                        </div>
-                        <div class="card-products-list-item">
-                            <button type="button" class="delete-item__btn">
-                            </button>
-                            <div class="product-img">
-                                <img src="assets/images/Mask_Group.svg" class="product-img__img">
-                            </div>
-                            <div class="product-name">название товара в две строки</div>
-                            <div class="product-quantity"><span>2</span><span>шт</span></div>
-                            <div class="product-price">15000&#8381</div>
-                        </div> -->
-                        
                     </div>
                 </div>
 
@@ -256,7 +223,7 @@
             <button class="totals__btn" type="submit">Оплатить</button>
 
             <div class="totals__terms valid-field">
-                <input type="checkbox"  name="agreeTerms" id="agreeTerms" required/>
+                <input type="checkbox"  name="agreeTerms" id="agreeTerms" class ="checkValidate" required/>
                 <label for="agreeTerms">
                     <span>Я согласен на </span>
                     <a class="totals__terms-link" href="#">обработку персональных данных и публичной офертой</a>
