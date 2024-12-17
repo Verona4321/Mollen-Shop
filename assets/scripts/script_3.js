@@ -83,6 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
 //Тут всё тоже ок
 
 
+
+
 let allProducts = [];
 //Загрузка данных из json
 document.addEventListener('DOMContentLoaded', function() {
@@ -108,27 +110,91 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('There has been a problem with your fetch operation:', error);
         });
 
-    // Функция, которая отображает продукты в виде списка
+
     function displayProducts(products) {
 
-        // Удаляем существующие элементы списка (если есть)
+        // Удаляем существующие элементы (если есть)
         productList.innerHTML = '';
 
-        // Проходим по массиву продуктов и добавляем каждый в список
+        // Проходим по массиву продуктов и добавляем каждый на страницу
         products.forEach(function(product) {
+            console.log(product.price);
             let productCard = document.createElement('div');
+            let productId = product.id;
             productCard.className = 'card';
             productCard.innerHTML = `
             <div class="icon"><img src="${product.icon}" class="icon-image"></div>
-        <img src="${product.image}" class="product-image">
-        <h2 class="product-name">${product.name}</h2>
-        <div class="availability">${product.availability}</div>
-        <div class="price">${product.price} ₽</div>
-        <button class="buy-button">Подробнее</button>
+            <img src="${product.image}" class="product-image">
+            <h2 class="product-name">${product.name}</h2>
+            <div class="availability">${product.availability}</div>
+            <div class="price">${product.price} ₽</div>
+            <button onclick="goToProductPage(productId)" class="buy-button">Подробнее</button>
             `;
             productList.appendChild(productCard);
+        button.addEventListener('click', goToProductPage(productId));
+        //button.addEventListener('click', () =&gt; goToProductPage(product.id));
         });
+        
     }
+
+    function goToProductPage() {
+        // Редирект на отдельную страницу продукта
+        window.location.href = `product.html?id=${productId}`;
+    }
+
+    displayProducts();
+
+    // ЭТО НУЖНО, ПРИМЕР
+    // async function loadProducts() {
+    //     const response = await fetch('products.json'); // Укажите путь к вашему JSON файлу
+    //     const products = await response.json();
+    //     const container = document.getElementById('product-container');
+    
+    //     products.forEach(product => {
+    //         const productDiv = document.createElement('div');
+    //         productDiv.classList.add('product');
+    
+    //         productDiv.innerHTML = `
+    //             <h2>${product.name}</h2>
+    //             <img src="${product.image}" alt="${product.name}" style="width: 200px; height: auto;">
+    //             <p>${product.description}</p>
+    //             <p>Цена: ${product.price}</p>
+    //             <button onclick="goToProductPage(${product.id})">Подробнее</button>
+    //         `;
+    
+    //         container.appendChild(productDiv);
+    //     });
+    // }
+    
+    // function goToProductPage(productId) {
+    //     // Редирект на отдельную страницу продукта
+    //     window.location.href = `product.html?id=${productId}`;
+    // }
+    
+    // loadProducts();
+
+
+
+// Попытка обработки ошибки: "Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received"
+    chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+        if (request.action === "getData") {
+            fetchDataFromServer()
+                .then(data => {
+                    sendResponse({ success: true, data: data });
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    sendResponse({ success: false, error: error.message });
+                });
+            return true; // Указываем, что ответ будет асинхронным
+        }
+    });
+
+
+
+
+
+
 
     function filterProducts(type) {
         if (type === 'all') {

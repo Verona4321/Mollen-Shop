@@ -83,58 +83,101 @@ document.addEventListener('DOMContentLoaded', function() {
 //Тут всё тоже ок
 
 
-let allProducts = [];
-//Загрузка данных из json
-document.addEventListener('DOMContentLoaded', function() {
 
-    fetch('catalog.json')
-        .then(function(response) {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json(); // Преобразуем ответ в JSON
-        })
-        .then(function(data) {
-            // Добавляем данные в наш массив
-            allProducts = data;
-            console.log(allProducts);
 
-            // Выводим продукты на страницу
-            displayProducts(allProducts);
-        })
-        .catch(function(error) {
-            console.error('There has been a problem with your fetch operation:', error);
-        });
 
-    // Функция, которая отображает товары
-    function displayProducts(products) {
 
-        // Удаляем существующие элементы списка (если есть)
-        productList.innerHTML = '';
 
-        // Проходим по массиву продуктов и добавляем каждый в список
-        products.forEach(function(product) {
-            let productCard = document.createElement('div');
-            productCard.className = 'card';
-            productCard.innerHTML = `
-            <div class="icon"><img src="${product.icon}" class="icon-image"></div>
-        <img src="${product.image}" class="product-image">
-        <h2 class="product-name">${product.name}</h2>
-        <div class="availability">${product.availability}</div>
-        <div class="price">${product.price} ₽</div>
-        <button class="buy-button" onclick="goToProductPage(${product.id})">Подробнее</button>
-            `;
-            button.addEventListener('click', goToProductPage(productId));
-            productList.appendChild(productCard);
-        });
-    }
 
-    function goToProductPage(productId) {
-        // Редирект на отдельную страницу продукта
-        window.location.href = `product.html?id=${productId}`;
-    }
+
+
+// let allProducts = [];
+// //Загрузка данных из json
+// document.addEventListener('DOMContentLoaded', function() {
+
+//     fetch('catalog.json')
+//         .then(function(response) {
+//             if (!response.ok) {
+//                 throw new Error('Network response was not ok');
+//             }
+//             return response.json(); // Преобразуем ответ в JSON
+//         })
+//         .then(function(data) {
+//             // Добавляем данные в наш массив
+//             allProducts = data;
+//             console.log(allProducts);
+
+//             // Выводим продукты на страницу
+//             displayProducts(allProducts);
+//         })
+//         .catch(function(error) {
+//             console.error('There has been a problem with your fetch operation:', error);
+//         });
+
+//     // Функция, которая отображает товары
+//     function displayProducts(products) {
+
+//         // Удаляем существующие элементы списка (если есть)
+//         productList.innerHTML = '';
+
+//         // Проходим по массиву продуктов и добавляем каждый в список
+//         products.forEach(function(product) {
+//             let productCard = document.createElement('div');
+//             productCard.className = 'card';
+//             productCard.innerHTML = `
+//             <div class="icon"><img src="${product.icon}" class="icon-image"></div>
+//         <img src="${product.image}" class="product-image">
+//         <h2 class="product-name">${product.name}</h2>
+//         <div class="availability">${product.availability}</div>
+//         <div class="price">${product.price} ₽</div>
+//         <button class="buy-button" onclick="goToProductPage(${product.id})">Подробнее</button>
+//             `;
+//             button.addEventListener('click', goToProductPage(productId));
+//             productList.appendChild(productCard);
+//         });
+//     }
+
+//     function goToProductPage(productId) {
+//         // Редирект на отдельную страницу продукта
+//         window.location.href = `product.html?id=${productId}`;
+//     }
     
-    displayProducts(allProducts);
+//     displayProducts(allProducts);
+
+
+
+
+async function loadProducts() {
+    const response = await fetch('catalog.json'); // Укажите путь к вашему JSON файлу
+    const allProducts = await response.json();
+    console.log(allProducts);
+    const container = document.getElementById('products');
+
+    allProducts.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.classList.add('card');
+
+        productDiv.innerHTML = `
+            <div class="icon"><img src="${product.icon}" class="icon-image"></div>
+            <img src="${product.image}" class="product-image">
+            <h2 class="product-name">${product.name}</h2>
+            <div class="availability">${product.availability}</div>
+            <div class="price">${product.price} ₽</div>
+            <button onclick="goToProductPage(${product.id})" class="buy-button">Подробнее</button>
+        `;
+
+        container.appendChild(productDiv);
+    });
+}
+
+function goToProductPage(productId) {
+    // Редирект на отдельную страницу продукта
+    window.location.href = `product.html?id=${productId}`;
+}
+
+loadProducts();
+
+
 
 
 
@@ -157,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Отобразить все продукты по умолчанию
     displayProducts(filterProducts('all'));
-});
+
 
 
 console.log(categories);
