@@ -124,11 +124,11 @@ document.addEventListener('DOMContentLoaded', function() {
             productCard.className = 'card';
             productCard.innerHTML = `
             <div class="icon"><img src="${product.icon}" class="icon-image"></div>
-        <img src="${product.image}" class="product-image">
-        <h2 class="product-name">${product.name}</h2>
-        <div class="availability">${product.availability}</div>
-        <div class="price">${product.price} ₽</div>
-        <button onclick="goToProductPage(productId)" class="buy-button">Подробнее</button>
+            <img src="${product.image}" class="product-image">
+            <h2 class="product-name">${product.name}</h2>
+            <div class="availability">${product.availability}</div>
+            <div class="price">${product.price} ₽</div>
+            <button onclick="goToProductPage(productId)" class="buy-button">Подробнее</button>
             `;
             productList.appendChild(productCard);
         button.addEventListener('click', goToProductPage(productId));
