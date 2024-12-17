@@ -172,6 +172,7 @@ body {
     gap: 2rem;
 }
 
+
 .footer-content img{
     height: 20px;
 }
@@ -198,18 +199,50 @@ body {
     margin-top: 0;
 }
 
+
+
+/* Общий стиль текста в футере */
+.footer-left p {
+    margin-top: 6rem; 
+    color: #777; 
+    font-size: 0.9rem; 
+    line-height: 1.5; 
+}
+
 /* Правая часть футера */
 .footer-right {
-    flex: 1;
-    text-align: right; 
+    text-align: right;
+    max-width: 300px; /* Ограничиваем ширину */
+    margin-left: auto; /* Смещаем вправо */
 }
 .social-icons {
     display: flex;
     gap: 1rem;
-    justify-content: end;
-    margin-top: 4rem;
+    justify-content: flex-end; /* Выравнивание вправо */
+    margin-top: 2rem; /* Корректируем отступ сверху */
 }
 
+.icon {
+    margin-left: 0px; 
+    margin-right: 0px;  
+    opacity: 0.9; 
+    transition: opacity 0.3s ease;
+    margin-top: 30px;
+}
+
+
+.social-icons img:hover {
+    opacity: 1; /* Полная непрозрачность */
+    filter: brightness(0.8) saturate(2); /* Делаем цвет глубже */
+}
+
+.social-icons img {
+    width: 24px; /* Ширина иконок */
+    height: 24px; /* Высота иконок */
+    object-fit: contain; /* Сохраняем пропорции */
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
 .footer-center ul li a, .footer-right a {
     text-decoration: none; 
     color: #777; 
@@ -227,14 +260,6 @@ body {
 
 .footer-center ul li a:hover, .footer-right a:hover {
     color: #000; 
-}
-
-/* Общий стиль текста в футере */
-.footer-left p {
-    margin-top: 6rem; 
-    color: #777; 
-    font-size: 0.9rem; 
-    line-height: 1.5; 
 }
 
 .footer-right p{
@@ -276,58 +301,64 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        
     }
 
     .footer-left {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
 
-    .footer-left img {
-        order: 1; 
-    }
-
-    .footer-left .copyright {
-        order: 5; 
-        
+    .footer-left p {
         font-size: 0.9rem;
-       
+        color: #999;
+        margin-top: 2rem;
     }
 
     .footer-right {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-left: 0px;
+    }
+
+    .copyright p{
+        margin-top: 20px;
     }
 
     .footer-right p {
-        order: 2; 
-        margin: 0;
-        font-size: 1.4rem; 
+        font-size: 1.4rem;
         font-weight: bold;
+        margin-bottom: 0px;
+        margin-top: 0px;
     }
 
     .footer-right a {
-        order: 3; 
         font-size: 1rem;
-        color: #666;
+        color: #4169E1;
         text-decoration: none;
+        margin-bottom: 0px;
     }
 
     .social-icons {
-        order: 4; 
         display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: 1rem; /* Отступы между иконками */
+        margin-top: 0px;
+    }
+
+    .social-icons a{
+        margin-top: 0px;
+    }
+
+
+    .social-icons img:hover {
+        opacity: 1;
     }
 
     .footer-center {
-        display: none; 
-    }
-
-    .catalog {
-        display: none; 
+        display: none; /* Скрываем центральный блок */
     }
 }
 
