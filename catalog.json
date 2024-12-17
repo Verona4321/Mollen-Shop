@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "type": "pillowcase",
         "name": "Наволочка Журавль",
         "icon": "assets/images/prints/forest_1.webp",
@@ -11,6 +12,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 2,
         "type": "pillowcase",
         "name": "Наволочка Таинственный лес",
         "icon": "assets/images/prints/forest.webp",
@@ -22,6 +24,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 3,
         "type": "pillowcase",
         "name": "Наволочка Алконост",
         "icon": "assets/images/prints/alconost.webp",
@@ -33,6 +36,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 4,
         "type": "pillowcase",
         "name": "Наволочка Корсак",
         "icon": "assets/images/prints/korsak.webp",
@@ -44,6 +48,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 5,
         "type": "pillowcase",
         "name": "Наволочка в мятном",
         "icon": "assets/images/prints/mint.webp",
@@ -55,6 +60,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 6,
         "type": "pillowcase",
         "name": "Наволочка в мятном 70x70",
         "icon": "assets/images/prints/mint.webp",
@@ -66,6 +72,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 7,
         "type": "pillowcase",
         "name": "Наволочка в бирюзовом",
         "icon": "assets/images/prints/blue.webp",
@@ -77,6 +84,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 8,
         "type": "pillowcase",
         "name": "Наволочка в вишнево-ягодном",
         "icon": "assets/images/prints/cherry.webp",
@@ -88,6 +96,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 9,
         "type": "pillowcase",
         "name": "Наволочка в вишнево-ягодном 70x70",
         "icon": "assets/images/prints/cherry.webp",
@@ -99,6 +108,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 10,
         "type": "pillowcase",
         "name": "Наволочка Рассвет",
         "icon": "assets/images/prints/dawn.webp",
@@ -110,6 +120,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 11,
         "type": "pillowcase",
         "name": "Наволочка Оммаж",
         "icon": "assets/images/prints/homage.png",
@@ -121,6 +132,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 12,
         "type": "pillowcase",
         "name": "Наволочка в нефритовом",
         "icon": "assets/images/prints/nefrit.webp",
@@ -132,6 +144,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 13,
         "type": "bedsheet",
         "name": "Простыня на резинке в жемчужно-белом",
         "icon": "assets/images/prints/zhemchuzhno_belyi.webp",
@@ -143,6 +156,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 14,
         "type": "bedsheet",
         "name": "Простыня на резинке в жемчужно-белом",
         "icon": "assets/images/prints/zhemchuzhno_belyi.webp",
@@ -154,6 +168,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 15,
         "type": "bedsheet",
         "name": "Простыня на резинке в жемчужно-белом",
         "icon": "assets/images/prints/zhemchuzhno_belyi.webp",
@@ -165,6 +180,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 16,
         "type": "bedsheet",
         "name": "Простыня на резинке в жемчужно-белом",
         "icon": "assets/images/prints/zhemchuzhno_belyi.webp",
@@ -176,6 +192,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 17,
         "type": "bedsheet",
         "name": "Простыня на резинке в жемчужно-белом",
         "icon": "assets/images/prints/zhemchuzhno_belyi.webp",
@@ -187,6 +204,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 18,
         "type": "bedsheet",
         "name": "Простыня на резинке в жемчужно-белом",
         "icon": "assets/images/prints/zhemchuzhno_belyi.webp",
@@ -198,6 +216,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 19,
         "type": "bedsheet",
         "name": "Простыня на резинке в серебристо-сером",
         "icon": "assets/images/prints/serebristo_seryi.webp",
@@ -209,6 +228,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 20,
         "type": "bedsheet",
         "name": "Простыня на резинке в серебристо-сером",
         "icon": "assets/images/prints/serebristo_seryi.webp",
@@ -220,6 +240,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 21,
         "type": "bedsheet",
         "name": "Простыня на резинке в серебристо-сером",
         "icon": "assets/images/prints/serebristo_seryi.webp",
@@ -231,6 +252,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 22,
         "type": "bedsheet",
         "name": "Простыня на резинке в серебристо-сером",
         "icon": "assets/images/prints/serebristo_seryi.webp",
@@ -242,6 +264,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 23,
         "type": "bedsheet",
         "name": "Простыня на резинке в серебристо-сером",
         "icon": "assets/images/prints/serebristo_seryi.webp",
@@ -253,6 +276,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 24,
         "type": "bedsheet",
         "name": "Простыня на резинке в серебристо-сером",
         "icon": "assets/images/prints/serebristo_seryi.webp",
@@ -264,6 +288,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 25,
         "type": "bedsheet",
         "name": "Простыня на резинке в нефритовом",
         "icon": "assets/images/prints/nefrit.webp",
@@ -275,6 +300,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 26,
         "type": "bedsheet",
         "name": "Простыня на резинке в нефритовом",
         "icon": "assets/images/prints/nefrit.webp",
@@ -286,6 +312,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 27,
         "type": "bedsheet",
         "name": "Простыня на резинке в нефритовом",
         "icon": "assets/images/prints/nefrit.webp",
@@ -297,6 +324,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 28,
         "type": "bedsheet",
         "name": "Простыня на резинке в нефритовом",
         "icon": "assets/images/prints/nefrit.webp",
@@ -308,6 +336,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 29,
         "type": "bedsheet",
         "name": "Простыня на резинке в нефритовом",
         "icon": "assets/images/prints/nefrit.webp",
@@ -319,6 +348,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 30,
         "type": "bedsheet",
         "name": "Простыня на резинке в нефритовом",
         "icon": "assets/images/prints/nefrit.webp",
@@ -330,6 +360,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 31,
         "type": "bedsheet",
         "name": "Простыня на резинке в ежевично-черном",
         "icon": "assets/images/prints/ezhevichno_chernyi.webp",
@@ -341,6 +372,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 32,
         "type": "bedsheet",
         "name": "Простыня на резинке в ежевично-черном",
         "icon": "assets/images/prints/ezhevichno_chernyi.webp",
@@ -352,6 +384,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 33,
         "type": "bedsheet",
         "name": "Простыня на резинке в ежевично-черном",
         "icon": "assets/images/prints/ezhevichno_chernyi.webp",
@@ -363,6 +396,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 34,
         "type": "bedsheet",
         "name": "Простыня на резинке в ежевично-черном",
         "icon": "assets/images/prints/ezhevichno_chernyi.webp",
@@ -374,6 +408,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 35,
         "type": "bedsheet",
         "name": "Простыня на резинке в ежевично-черном",
         "icon": "assets/images/prints/ezhevichno_chernyi.webp",
@@ -385,6 +420,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 36,
         "type": "bedsheet",
         "name": "Простыня на резинке в ежевично-черном",
         "icon": "assets/images/prints/ezhevichno_chernyi.webp",
@@ -396,6 +432,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 37,
         "type": "bedsheet",
         "name": "Простыня на резинке в пудровом",
         "icon": "assets/images/prints/pudrovyi.webp",
@@ -407,6 +444,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 38,
         "type": "bedsheet",
         "name": "Простыня на резинке в пудровом",
         "icon": "assets/images/prints/pudrovyi.webp",
@@ -418,6 +456,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 39,
         "type": "bedsheet",
         "name": "Простыня на резинке в пудровом",
         "icon": "assets/images/prints/pudrovyi.webp",
@@ -429,6 +468,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 40,
         "type": "bedsheet",
         "name": "Простыня на резинке в пудровом",
         "icon": "assets/images/prints/pudrovyi.webp",
@@ -440,6 +480,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 41,
         "type": "bedsheet",
         "name": "Простыня на резинке в пудровом",
         "icon": "assets/images/prints/pudrovyi.webp",
@@ -451,6 +492,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 42,
         "type": "bedsheet",
         "name": "Простыня на резинке в пудровом",
         "icon": "assets/images/prints/pudrovyi.webp",
@@ -462,6 +504,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 43,
         "type": "bedsheet",
         "name": "Простыня на резинке в розово-коралловом",
         "icon": "assets/images/prints/rozovo_korallovyi.webp",
@@ -473,6 +516,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 44,
         "type": "bedsheet",
         "name": "Простыня на резинке в розово-коралловом",
         "icon": "assets/images/prints/rozovo_korallovyi.webp",
@@ -484,6 +528,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 45,
         "type": "bedsheet",
         "name": "Простыня на резинке в розово-коралловом",
         "icon": "assets/images/prints/rozovo_korallovyi.webp",
@@ -495,6 +540,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 46,
         "type": "bedsheet",
         "name": "Простыня на резинке в розово-коралловом",
         "icon": "assets/images/prints/rozovo_korallovyi.webp",
@@ -506,6 +552,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 47,
         "type": "bedsheet",
         "name": "Простыня на резинке в розово-коралловом",
         "icon": "assets/images/prints/rozovo_korallovyi.webp",
@@ -517,6 +564,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 48,
         "type": "bedsheet",
         "name": "Простыня на резинке в розово-коралловом",
         "icon": "assets/images/prints/rozovo_korallovyi.webp",
@@ -528,6 +576,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 49,
         "type": "bedsheet",
         "name": "Простыня прямая в серебристо-сером",
         "icon": "assets/images/prints/serebristo_seryi.webp",
@@ -539,6 +588,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 50,
         "type": "bedsheet",
         "name": "Простыня прямая в серебристо-сером",
         "icon": "assets/images/prints/serebristo_seryi.webp",
@@ -550,6 +600,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 51,
         "type": "bedsheet",
         "name": "Простыня прямая в нефритовом",
         "icon": "assets/images/prints/nefrit.webp",
@@ -561,6 +612,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 52,
         "type": "bedsheet",
         "name": "Простыня прямая в нефритовом",
         "icon": "assets/images/prints/nefrit.webp",
@@ -572,6 +624,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 53,
         "type": "bedsheet",
         "name": "Простыня прямая в ежевично-черном",
         "icon": "assets/images/prints/ezhevichno_chernyi.webp",
@@ -583,6 +636,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 54,
         "type": "bedsheet",
         "name": "Простыня прямая в ежевично-черном",
         "icon": "assets/images/prints/ezhevichno_chernyi.webp",
@@ -594,6 +648,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 55,
         "type": "bedsheet",
         "name": "Простыня прямая в розово-коралловом",
         "icon": "assets/images/prints/rozovo_korallovyi.webp",
@@ -605,6 +660,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 56,
         "type": "bedsheet",
         "name": "Простыня прямая в розово-коралловом",
         "icon": "assets/images/prints/rozovo_korallovyi.webp",
@@ -616,6 +672,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 57,
         "type": "bedsheet",
         "name": "Простыня прямая в жемчужно-белом",
         "icon": "assets/images/prints/zhemchuzhno_belyi.webp",
@@ -627,6 +684,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 58,
         "type": "bedsheet",
         "name": "Простыня прямая в жемчужно-белом",
         "icon": "assets/images/prints/zhemchuzhno_belyi.webp",
@@ -638,6 +696,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 59,
         "type": "bedsheet",
         "name": "Простыня прямая в пудровом",
         "icon": "assets/images/prints/pudrovyi.webp",
@@ -649,6 +708,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 60,
         "type": "bedsheet",
         "name": "Простыня прямая в пудровом",
         "icon": "assets/images/prints/pudrovyi.webp",
@@ -660,6 +720,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 61,
         "type": "duvetCover",
         "name": "Пододеяльник в мятном",
         "icon": "assets/images/prints/mint.webp",
@@ -671,6 +732,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 62,
         "type": "duvetCover",
         "name": "Пододеяльник в мятном",
         "icon": "assets/images/prints/mint.webp",
@@ -682,6 +744,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 63,
         "type": "duvetCover",
         "name": "Пододеяльник в мятном",
         "icon": "assets/images/prints/mint.webp",
@@ -693,6 +756,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 64,
         "type": "duvetCover",
         "name": "Пододеяльник в мятном",
         "icon": "assets/images/prints/mint.webp",
@@ -704,6 +768,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 65,
         "type": "duvetCover",
         "name": "Пододеяльник в серебристо-сером",
         "icon": "assets/images/prints/serebristo_seryi.webp",
@@ -715,6 +780,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 66,
         "type": "duvetCover",
         "name": "Пододеяльник в серебристо-сером",
         "icon": "assets/images/prints/serebristo_seryi.webp",
@@ -726,6 +792,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 67,
         "type": "duvetCover",
         "name": "Пододеяльник в серебристо-сером",
         "icon": "assets/images/prints/serebristo_seryi.webp",
@@ -737,6 +804,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 68,
         "type": "duvetCover",
         "name": "Пододеяльник в серебристо-сером",
         "icon": "assets/images/prints/serebristo_seryi.webp",
@@ -748,6 +816,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 69,
         "type": "duvetCover",
         "name": "Пододеяльник в нефритовом",
         "icon": "assets/images/prints/nefrit.webp",
@@ -759,6 +828,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 70,
         "type": "duvetCover",
         "name": "Пододеяльник в нефритовом",
         "icon": "assets/images/prints/nefrit.webp",
@@ -770,6 +840,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 71,
         "type": "duvetCover",
         "name": "Пододеяльник в нефритовом",
         "icon": "assets/images/prints/nefrit.webp",
@@ -781,6 +852,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 72,
         "type": "duvetCover",
         "name": "Пододеяльник в нефритовом",
         "icon": "assets/images/prints/nefrit.webp",
@@ -792,6 +864,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 73,
         "type": "duvetCover",
         "name": "Пододеяльник в ежевично-черном",
         "icon": "assets/images/prints/ezhevichno_chernyi.webp",
@@ -803,6 +876,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 74,
         "type": "duvetCover",
         "name": "Пододеяльник в ежевично-черном",
         "icon": "assets/images/prints/ezhevichno_chernyi.webp",
@@ -814,6 +888,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 75,
         "type": "duvetCover",
         "name": "Пододеяльник в ежевично-черном",
         "icon": "assets/images/prints/ezhevichno_chernyi.webp",
@@ -825,6 +900,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 76,
         "type": "duvetCover",
         "name": "Пододеяльник в ежевично-черном",
         "icon": "assets/images/prints/ezhevichno_chernyi.webp",
@@ -836,6 +912,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 77,
         "type": "duvetCover",
         "name": "Пододеяльник в жемчужно-белом",
         "icon": "assets/images/prints/zhemchuzhno_belyi.webp",
@@ -847,6 +924,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 78,
         "type": "duvetCover",
         "name": "Пододеяльник в жемчужно-белом",
         "icon": "assets/images/prints/zhemchuzhno_belyi.webp",
@@ -858,6 +936,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 79,
         "type": "duvetCover",
         "name": "Пододеяльник в жемчужно-белом",
         "icon": "assets/images/prints/zhemchuzhno_belyi.webp",
@@ -869,6 +948,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 80,
         "type": "duvetCover",
         "name": "Пододеяльник в жемчужно-белом",
         "icon": "assets/images/prints/zhemchuzhno_belyi.webp",
@@ -880,6 +960,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 81,
         "type": "duvetCover",
         "name": "Пододеяльник в пудровом",
         "icon": "assets/images/prints/pudrovyi.webp",
@@ -891,6 +972,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 82,
         "type": "duvetCover",
         "name": "Пододеяльник в пудровом",
         "icon": "assets/images/prints/pudrovyi.webp",
@@ -902,6 +984,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 83,
         "type": "duvetCover",
         "name": "Пододеяльник в пудровом",
         "icon": "assets/images/prints/pudrovyi.webp",
@@ -913,6 +996,7 @@
         "availability": "В наличии"
     },
     {
+        "id": 84,
         "type": "duvetCover",
         "name": "Пододеяльник в пудровом",
         "icon": "assets/images/prints/pudrovyi.webp",
