@@ -22,8 +22,9 @@ main.product-page {
 /* Product Container */
 .product-container {
     display: flex;
-    justify-content: end;
+    justify-content: flex-start;
     gap: 40px;
+    padding: 30px;
 }
 
 /* Product Images */
@@ -33,12 +34,15 @@ main.product-page {
     gap: 10px;
 }
 
-.main-image img {
+.main-image{
     width: 100%;
+    height: 80vh;
+    margin-left: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .thumbnail-images {
+    justify-content: end;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -47,8 +51,6 @@ main.product-page {
 .thumbnail-images img {
     width: 50px;
     height: 50px;
-    object-fit: cover;
-    border: 1px solid #ddd;
     cursor: pointer;
     transition: transform 0.3s;
 }
@@ -119,14 +121,14 @@ main.product-page {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
-.add-to-cart, .quick-buy {
-    background-color: #007BFF;
+.add-to-cart{
+    background-color: #004996;
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-    border-radius: 4px;
+    border-radius: 22px;
     transition: background-color 0.3s;
 }
 .add-to-cart:hover, .quick-buy:hover {
@@ -145,27 +147,23 @@ main.product-page {
     margin-bottom: 5px;
     font-weight: bold;
 }
-.option select, #colors {
+.option select{
     width: 100%;
 }
-#colors {
+
+#prints-container {
     display: flex;
-    gap: 5px;
     flex-wrap: wrap;
-}
-.color-option {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    transition: transform 0.3s, border-color 0.3s;
-}
-.color-option:hover {
-    transform: scale(1.1);
-    border-color: #007BFF;
+    gap: 10px;
 }
 
+.print-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
 /* Additional Links */
 .additional-links a {
     display: inline-block;
@@ -175,4 +173,34 @@ main.product-page {
 }
 .additional-links a:hover {
     text-decoration: underline;
+}
+
+/* Стрелки слева */
+.additional-icons {
+    position: absolute;
+    top: 27%;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: translateY(-50%); /* Центрирование по вертикали */
+}
+
+.arrow-icon {
+    width: 60px; /* Увеличить размер стрелок, если нужно */
+    height: 60px;
+    cursor: pointer;
+    background-color: #fff; /* Белый фон для стрелок */
+    border: 1px solid #ddd; /* Лёгкая рамка вокруг */
+    border-radius: 50%; /* Сделать кнопки круглыми */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Добавить тень */
+}
+
+.arrow-icon img {
+    width: 22px; /* Уменьшить размер изображения внутри кнопки */
+    height: 22px;
 }
