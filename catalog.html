@@ -16,13 +16,22 @@
         <h2>Категории</h2>
         <div class="categories">
         <input type="radio"><label for="">Постельное бельё</label><br>
+        <input type="radio"><label for="">Одежда</label><br>
         <input type="radio"><label for="">Ароматы</label><br>
         <input type="radio"><label for="">Аксессуары</label>
         </div>
         <div class="bedLinen">
             Размер, см
             <div class="sizes">
-                <div class="size">50*70</div><div class="size">70*70</div>
+            <div class="sizes_pillowcases" id="sizes_pillowcases">
+                <div class="size" id="size">50*70</div><div class="size">70*70</div>
+            </div>
+            <div class="sizes_sheets" id="sizes_sheets">
+                <div class="size" id="size">50*70</div><div class="size">70*70</div>
+            </div>
+            <div class="sizes_duvet-covers" id="sizes_duvet-covers">
+                <div class="size" id="size">50*70</div><div class="size">70*70</div>
+            </div>
             </div>
         </div>
         Принт
@@ -41,7 +50,11 @@
             <div class="print"><img src="assets/images/prints/mint.webp" alt=""></div>
             <div class="print"><img src="assets/images/prints/cherry.webp" alt=""></div>
             <div class="print"><img src="assets/images/prints/nefrit.webp" alt=""></div>
-            <div class="print"><img src="assets/images/prints/" alt=""></div>
+            <div class="print"><img src="assets/images/prints/serebristo_seryi.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/ezhevichno_chernyi.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/pudrovyi.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/rozovo_korallovyi.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/zhemchuzhno_belyi.webp" alt=""></div>
         </div>
         Цена, ₽
 
@@ -62,7 +75,7 @@
         </div>-->
 
 
-        <div class="slider-container">
+        <div class="slider-container" id="sliderContainer">
             <div id="slider"></div>
             <div class="value-display">
                 <span id="valueLow">0</span>
@@ -76,10 +89,19 @@
         <a href="index.html" class="links-header">Главная</a> / <a href="" class="links-header">Каталог</a>
         <h1>Постельное  бельё</h1>
         <div class="linen-categories">
-            <div class="category">Наволочки</div>
+            <div class="category" id="pillowcases">Наволочки</div>
             <div class="category">Простыни</div>
             <div class="category">Пододеяльники</div>
-            <div class="category">Все</div>
+            <div class="category selected" id="all">Все</div>
+        </div>
+        <div class="sort">
+            <div class="sort__parametres">
+            <div>По популярности <img src="assets/images/catalog/Vector 1.png"></div>
+            <div>По цене <img src="assets/images/catalog/Vector 1.png"></div>
+            </div>
+            <div class="">
+                <input type="radio"><label for="">В наличии</label><br>
+            </div>
         </div>
         <div class="products" id="products">
             
@@ -88,6 +110,7 @@
     
     <!-- Подключение jQuery через CDN -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Подключение jQuery UI -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--NoUISlider-->

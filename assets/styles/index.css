@@ -83,6 +83,8 @@
 
 .button-text {
   margin-left: 190px;
+  font-size: 18px;
+  font-family: 'Orchidea Pro';
 }
 
 .index-squares {
@@ -91,13 +93,61 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 57vw 46vw;
+  color: white;
 }
 
 .index-square1 {
   background-image: url('/assets/images/index/pillow-on-bed.png');
   background-size: cover;
   padding: 1vw;
-  color: white;
+  color: white 
+}
+
+.heading-square {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.index-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.9fr 0.9fr 0.9fr;
+}
+
+.index-card {
+  margin: 0;
+  padding: 0;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  text-align: center;
+  border: 1px solid rgba(236, 234, 231, 1);
+}
+
+.index-card:hover {
+  transform: scale(1.2); /* Увеличение карточки при наведении */
+  background-color: white;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.index-card:hover .buy-button {
+  display: block; /* Показать кнопку при наведении на карточку */
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: scale(1.2); /* Увеличение карточки при наведении */
+  background-color: white;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card:hover .buy-button {
+  display: block; /* Показать кнопку при наведении на карточку */
 }
 
 .index-square3 {
@@ -107,6 +157,7 @@
 .index-square4 {
   background-image: url('/assets/images/index/girl-on-bed2.png');
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .index-square3 .button::before {
@@ -133,6 +184,14 @@
   height: 100%;
 }
 
+.link-square {
+  text-decoration: none;
+  color: #1E1E1E;
+  margin-left: 5px;
+}
+
+.link-square:hover {color: black;}
+
 .button-text {
   margin-left: 190px;
 }
@@ -152,6 +211,10 @@
 @media (min-width: 1800px) {
   .index-squares {
     grid-template-rows: 39vw 32.5vw;
+  }
+
+  .index-products {
+    grid-template-rows: 1fr 1fr;
   }
 
   .girl-on-bed_image-container .button-1 {
@@ -177,5 +240,9 @@
   .girl-on-bed_image-container .button-5 {
     top: 40vw;
     left: 25vw;
+  }
+
+  .index-card {
+    height: 400px;
   }
 }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="assets/styles/catalog.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <!-- Подключение CSS для jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--NoUISlider-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" rel="stylesheet">
+</head>
+<body>
+    <aside>
+        <h2>Категории</h2>
+        <div class="categories">
+        <input type="radio"><label for="">Постельное бельё</label><br>
+        <input type="radio"><label for="">Одежда</label><br>
+        <input type="radio"><label for="">Ароматы</label><br>
+        <input type="radio"><label for="">Аксессуары</label>
+        </div>
+        <div class="bedLinen">
+            Размер, см
+            <div class="sizes">
+            <div class="sizes_pillowcases" id="sizes_pillowcases">
+                <div class="size" id="size">50*70</div><div class="size">70*70</div>
+            </div>
+            <div class="sizes_sheets" id="sizes_sheets">
+                <div class="size" id="size">90x200</div><div class="size">120x200</div><div class="size">140x200</div>
+                <div class="size">160x200</div><div class="size">180x200</div><div class="size">200x200</div>
+            </div>
+            <div class="sizes_duvet-covers" id="sizes_duvet-covers">
+                <div class="size" id="size">150*200</div><div class="size">180*200</div><div class="size">200x220</div>
+                <div class="size">240x220</div>
+            </div>
+            </div>
+        </div>
+        Принт
+        <div class="choose__print" id="choosePrint">
+            <div class="print"><img src="assets/images/prints/alconost.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/forest.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/homage.png" alt=""></div>
+            <div class="print"><img src="assets/images/prints/korsak.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/forest_1.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/dawn.webp" alt=""></div>
+
+        </div>
+        Цвет
+        <div class="choose__print" id="choosePrint">
+            <div class="print"><img src="assets/images/prints/blue.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/mint.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/cherry.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/nefrit.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/serebristo_seryi.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/ezhevichno_chernyi.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/pudrovyi.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/rozovo_korallovyi.webp" alt=""></div>
+            <div class="print"><img src="assets/images/prints/zhemchuzhno_belyi.webp" alt=""></div>
+        </div>
+        Цена, ₽
+
+        <!--СЛАЙДЕР
+        <div class="middle">
+            <div class="multi-range-slider">
+                <input type="range" id="input-left" min="0" max="100" value="25">
+                <input type="range" id="input-right" min="0" max="100" value="75">
+        
+                <div class="slider" id="slider">
+                    <div class="track"></div>
+                    <div class="range"></div>
+                    <div class="thumb thumbleft"></div>
+                    <div class="thumb thumbright"></div>
+                </div>
+        
+            </div>
+        </div>-->
+
+
+        <div class="slider-container" id="sliderContainer">
+            <div id="slider"></div>
+            <div class="value-display">
+                <span id="valueLow">0</span>
+                <span id="valueHigh">0</span>
+            </div>
+        </div>
+        <!---->
+
+    </aside>
+    <main>
+        <a href="index.html" class="links-header">Главная</a> / <a href="" class="links-header">Каталог</a>
+        <h1>Постельное  бельё</h1>
+        <div class="linen-categories">
+            <div class="category" id="pillowcases">Наволочки</div>
+            <div class="category" id="sheets">Простыни</div>
+            <div class="category" id="duvetCovers">Пододеяльники</div>
+            <div class="category selected" id="all">Все</div>
+        </div>
+        <div class="sort">
+            <div class="sort__parametres">
+            <div>По популярности <img src="assets/images/catalog/Vector 1.png"></div>
+            <div>По цене <img src="assets/images/catalog/Vector 1.png"></div>
+            </div>
+            <div class="">
+                <input type="radio"><label for="">В наличии</label><br>
+            </div>
+        </div>
+        <div class="products" id="products">
+            
+        </div>
+    </main>
+    
+    <!-- Подключение jQuery через CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" crossorigin="anonymous"></script>
+    <!-- Подключение jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--NoUISlider-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+    <script src="assets/scripts/script_2.js"></script>
+</body>
+</html>
