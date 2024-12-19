@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница товара</title>
-    <link rel="stylesheet" href="assets/styles/product-page.css">
+    <link rel="stylesheet" href="assets/styles/product.css">
     <link rel="stylesheet" href="assets/styles/header-footer.css">
 </head>
 <body>
@@ -130,14 +130,6 @@
                 </div>
             </div>
         </div>
-        <div class="additional-icons">
-            <div class="arrow-icon">
-                <img src="assets/icons/catalog/arrow1.png" alt="Arrow Icon 1">
-            </div>
-            <div class="arrow-icon">
-                <img src="assets/icons/catalog/arrow2.png" alt="Arrow Icon 2">
-            </div>
-        </div>
     </footer>
 
 
@@ -149,26 +141,44 @@
         async function loadProduct() {
             const urlParams = new URLSearchParams(window.location.search);
             const productId = urlParams.get('id');
-
+    
             const response = await fetch('catalog.json'); // Укажите путь к вашему JSON файлу
             const products = await response.json();
             const product = products.find(p => p.id === parseInt(productId));
-
+    
             if (product) {
-                const productDiv = document.getElementById('product-details');
-                productDiv.innerHTML = `
-                    <h2 class="product-name">${product.name}</h2>
-                    <img src="${product.image}" alt="${product.name}" style="width: 300px; height: auto;">
-                    <p>${product.availability}</p>
-                    <p>${product.description}</p>
-                    <p>Цена: ${product.price}</p>
-                `;
+            const productDiv = document.getElementById('product-details');
+            productDiv.innerHTML = `
+                <div class="image-container">
+                    <img src="${product.image}" alt="${product.name}" class="image">
+                </div>
+                <div class="text-container">
+                    <div class="product-name">
+                        <h2>${product.name}</h2>
+                    </div>
+                    <div class="availability">
+                        <p>${product.availability}</p>
+                    </div>
+                    <div class="description">
+                        <p>${product.description}</p>
+                    </div>
+                    <div class="price">
+                        <p>Цена: ${product.price}</p>
+                    </div>
+                </div>
+            `;
             } else {
                 document.getElementById('product-details').innerHTML = '<p>Товар не найден.</p>';
             }
         }
-
+    
         loadProduct();
-    </script>
+    </script
+
+<script src="assets/scripts/script_2_1.js"></script>
+<script src="assets/scripts/load_product.js"></script>
+<script src="assets/scripts/pop-up.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="assets/scripts/product-page.js"></script>
 </body>
 </html>
