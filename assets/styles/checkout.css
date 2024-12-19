@@ -2,16 +2,19 @@
   display: flex;
   flex-direction: column;
   width: 70%;
+  padding-left: 2rem;
+  margin-left: none;
 }
 .checkoutHeader {
   display: flex;
   flex-direction: column;
-  /* margin-top: 3rem; */
-  padding-top: 5rem;
+  padding-top: 3rem;
   padding-bottom: 1rem;
+  padding-left: 2rem;
   border-style: solid;
   border-color: rgba(236, 234, 231, 1);
   border-top: none;
+  /* border-left: none; */
   border-width: 0.15rem;
 }
 .checkoutItem {
@@ -21,13 +24,12 @@
   border-style: solid;
   border-color: rgba(236, 234, 231, 1);
   border-top: none;
+  /* border-left: none; */
   border-width: 0.15rem;
 }
 .itemDetails {
   padding-top: 0.5rem;
   padding-right: 5rem;
-
-  /* margin-right: 5rem; */
 }
 .sizeAndColor {
   display: flex;
@@ -38,9 +40,11 @@ h1 {
 }
 .smallText {
   color: rgba(114, 113, 110, 1);
+  font-size: 1em;
 }
 .smallTextHeader {
   color: rgba(114, 113, 110, 1);
+  font-size: 1em;
 }
 .smallText:last-of-type {
   text-transform: uppercase;
@@ -80,12 +84,7 @@ h2 {
   font-size: 1.2em;
   height: 2rem;
   width: 9rem;
-  /* padding-top: 0.5rem; */
   margin-top: 4rem;
-  /* margin-left: 3rem;
-  margin-right: 2rem; */
-  /* padding-right: 2rem;
-  padding-left: 2rem; */
   border-radius: 2rem;
 }
 .quantity {
@@ -126,4 +125,12 @@ h2 {
 }
 button {
   border: none;
+}
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: rgba(114, 113, 110, 1);
+  font-size: 1em;
 }
