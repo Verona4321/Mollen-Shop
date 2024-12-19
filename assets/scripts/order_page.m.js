@@ -25,43 +25,45 @@
     const body = document.querySelector('.body');
     const checkValidate = document.querySelectorAll('.checkValidate')
     const agreeTerms = document.getElementById('agreeTerms');
-    const finalHTML = `<main class="main_final">
-                            <section class="section_final">
-                                <div>
-                                    <nav class="menu">
-                                        <ul class="menu-list">
-                                            <li class="menu-item"><a class="menu-link" href="#">Главная</a></li>
-                                            <span>/</span>
-                                            <li class="menu-item"><a class="menu-link" href="#">Корзина</a></li>
-                                        </ul>
-                                    </nav>
-                                    <h1 class="final_message-title"></h1>
-                                </div>
-                                <div>
-                                    <p class="final_message"></p>
+    const form = document.forms[0];
+    const formElements = form.elements;
+    const button = document.querySelector('.totals__btn');
+    // const finalHTML = `<main class="main_final">
+    //                         <section class="section_final">
+    //                             <div>
+    //                                 <nav class="menu">
+    //                                     <ul class="menu-list">
+    //                                         <li class="menu-item"><a class="menu-link" href="#">Главная</a></li>
+    //                                         <span>/</span>
+    //                                         <li class="menu-item"><a class="menu-link" href="#">Корзина</a></li>
+    //                                     </ul>
+    //                                 </nav>
+    //                                 <h1 class="final_message-title"></h1>
+    //                             </div>
+    //                             <div>
+    //                                 <p class="final_message"></p>
                                     
-                                    <button class="final_btn"><a class="final_link"></a></button>
-                                </div>
-                            </section>
-                            <aside class="aside_final">
-                            </aside>
-                        </main>`
-    const finalScript = `<script src='assets/scripts/order_sucsess.js'></script>`;
+    //                                 <button class="final_btn"><a class="final_link"></a></button>
+    //                             </div>
+    //                         </section>
+    //                         <aside class="aside_final">
+    //                         </aside>
+    //                     </main>`
+    // const finalScript = `<script src='assets/scripts/order_success.js'></script>`;
     let productList = [];
 
     document.querySelector(".totals__btn").disabled = true;
 
 // Рендер корзины c сервера:   
-    const renderProductList = fetch('http://localhost:3000', {
+    const renderProductList = fetch('http://localhost:3000/cart', {
         method: 'GET'})
         .then((res) => {
             return res.json();
         })
         .then((data) => {
-            productList = data.cart;
-            console.log(data.cart)
+            productList = data;
 
-            for (let item of data.cart) {
+            for (let item of productList) {
                 renderProductCart (item);
 
             finalCount();
@@ -113,11 +115,13 @@ countQuantity = () => {
 };
 totalQuantity.textContent = countQuantity();
 
-if (data.wrapping){
-    wrapping.textContent = '500'}
-    else {wrapping.textContent = 'Нет'};
+// if (data.wrapping){
+//     wrapping.textContent = '500'}
+//     else {wrapping.textContent = 'Нет'};
 
-totalOrderPrice.textContent = countTotals() + Number(wrapping.textContent) + 500;}
+totalOrderPrice.textContent = countTotals()
+//  + Number(wrapping.textContent) + 500;}
+}
 
 deliveryBtn.forEach(function (btn) {
     btn.addEventListener('click', function() {
@@ -137,11 +141,7 @@ deliveryBtn.forEach(function (btn) {
 
 //   Валидация формы:
 
-const form = document.forms[0];
-const formElements = form.elements;
-const button = document.querySelector('.totals__btn');
-
-var cleave = new Cleave('#tel', {
+let cleave = new Cleave('#tel', {
     phone: true,
     phoneRegionCode: 'RU'
 });
@@ -164,16 +164,17 @@ checkValidate.forEach(function (el) {
 
 // Функция сбора данных формы и корзины:
 
-let data = {};
+let cartData = {};
+
 const createData = () => {
 
     $.each($('.form').serializeArray(), function(i, field) {
-        data[field.name] = field.value;
+        cartData[field.name] = field.value;
     });
     
-    data.products = localStorage.getItem('cart');
-    data.wrapping = localStorage.getItem('wrapping');
-return data;
+    cartData.products = productList;
+    // cartData.wrapping = localStorage.getItem('wrapping');
+return cartData;
 };
 
 
@@ -226,28 +227,41 @@ form.addEventListener ("submit", async(e) => {
     createData();
 
 
-    await fetch('http://localhost:3000/orders', {
+    const response = await fetch('http://localhost:3000/orders', {
         method: 'POST',
-        body: JSON.stringify(data)})
+        body: JSON.stringify(createData())})
 
                 .then(res => {
                     if (res.ok) {
-                        body.innerHTML = finalHTML + finalScript;
-                        document.querySelector('.final_message-title').textContent = "Заказ оформлен";
-                        document.querySelector('.final_link').textContent = "На главную";
-                        localStorage.removeItem('cart', 'wrapping');
-
+                        // body.innerHTML = finalHTML + finalScript;
+                        // document.querySelector('.final_message-title').textContent = "Заказ оформлен";
+                        // document.querySelector('.final_link').textContent = "На главную";
+                        // localStorage.removeItem('cart', 'wrapping');
+                        window.location = 'order_success.html';
+                        form.reset;
                     }
                     else { 
-                        body.innerHTML = finalHTML;
-                        document.querySelector('.final_message-title').textContent = "Произошла ошибка";
-                        document.querySelector('.final_link').textContent = "Вернуться в корзину";
+                        // body.innerHTML = finalHTML;
+                        // document.querySelector('.final_message-title').textContent = "Произошла ошибка";
+                        // document.querySelector('.final_link').textContent = "Вернуться в корзину";
+                        window.location = 'order_error.html'
 
                     }
                 })
                 .catch((err) => {
-                    body.innerHTML = finalHTML;
-                    document.querySelector('.final_message-title').textContent = "Произошла ошибка";
-                    document.querySelector('.final_link').textContent = "Вернуться в корзину";
+                    // body.innerHTML = finalHTML;
+                    // document.querySelector('.final_message-title').textContent = "Произошла ошибка";
+                    // document.querySelector('.final_link').textContent = "Вернуться в корзину";
+                    window.location = 'order_error.html'
                 })
+                // .finally (function() {
+                //     fetch('http://localhost:3000/', {
+                //         method: 'DELETE',
+                //         headers: 'cart'
+                //     })
+                //         .then(res => {
+                //         console.log(res.status, res.statusText); // 200 OK
+                //     });
+                // })
+
 });
