@@ -1,0 +1,129 @@
+.checkoutItems {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.checkoutHeader {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 3rem; */
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  border-style: solid;
+  border-color: rgba(236, 234, 231, 1);
+  border-top: none;
+  border-width: 0.15rem;
+}
+.checkoutItem {
+  display: flex;
+  justify-content: space-between;
+  height: 15rem;
+  border-style: solid;
+  border-color: rgba(236, 234, 231, 1);
+  border-top: none;
+  border-width: 0.15rem;
+}
+.itemDetails {
+  padding-top: 0.5rem;
+  padding-right: 5rem;
+
+  /* margin-right: 5rem; */
+}
+.sizeAndColor {
+  display: flex;
+}
+h1 {
+  margin: 0;
+  font-size: 2em;
+}
+.smallText {
+  color: rgba(114, 113, 110, 1);
+}
+.smallTextHeader {
+  color: rgba(114, 113, 110, 1);
+}
+.smallText:last-of-type {
+  text-transform: uppercase;
+}
+h1,
+h2 {
+  color: rgba(30, 30, 30, 1);
+  text-transform: uppercase;
+}
+h2 {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  font-size: 1.2em;
+}
+.itemImage {
+  width: 20em;
+  height: 13em;
+}
+.size {
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin-top: 0.2rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  border: thin;
+  border-color: rgb(219, 218, 216);
+  border-style: solid;
+}
+.itemColor {
+  width: 2em;
+  height: 2em;
+  border-radius: 0.5rem;
+}
+.itemQuantity {
+  color: rgba(114, 113, 110, 1);
+  background-color: rgba(245, 243, 240, 1);
+  font-size: 1.2em;
+  height: 2rem;
+  width: 9rem;
+  /* padding-top: 0.5rem; */
+  margin-top: 4rem;
+  /* margin-left: 3rem;
+  margin-right: 2rem; */
+  /* padding-right: 2rem;
+  padding-left: 2rem; */
+  border-radius: 2rem;
+}
+.quantity {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.quantityLess {
+  color: rgba(114, 113, 110, 1);
+  background-color: rgba(245, 243, 240, 1);
+  font-size: 1.2em;
+  width: 0.5rem;
+  margin-left: 1.4rem;
+  margin-right: 0.6rem;
+}
+.quantityMore {
+  color: rgba(114, 113, 110, 1);
+  background-color: rgba(245, 243, 240, 1);
+  font-size: 1.2em;
+  width: 0.5rem;
+  margin-left: 0.4rem;
+  margin-top: 0.2rem;
+  margin-right: 0.1rem;
+}
+.itemPrice {
+  width: 9rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 4rem;
+  font-size: 1.3em;
+}
+.deleteButton {
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: 4rem;
+  border-radius: 1rem;
+  background-color: rgba(245, 243, 240, 1);
+  margin-right: 2rem;
+}
+button {
+  border: none;
+}
