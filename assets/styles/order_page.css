@@ -78,7 +78,7 @@ color: #4E76C6;
     grid-template-rows: 584px 413px 312px 1fr;
 }
 
-.menu-container, .order-info__subtitle, .order-info__user-form, .order-info__delivery-form, .order-info__pay-form, .order-info__card-products-list {
+.menu-container, .order-info__subtitle, .order-info__user-form, .order-info__delivery-form, .order-info__pay-form, .order-info__cart-products-list {
     border-right: 1px solid #ECEAE7;
     border-bottom: 1px solid #ECEAE7;
 }
@@ -173,11 +173,11 @@ input::placeholder {
     padding-bottom: 25px;
 }
 
-.order-info__card-products-list {
+.order-info__cart-products-list {
     display: flex;
     flex-wrap: wrap;
 }
-.card-products-list-item {
+.cart-products-list-item {
     width: 50%;
     min-width: 40%;
     display: flex;
@@ -356,5 +356,11 @@ body {
     background-color: #4E76C6;
     color: #ECEAE7;
     border: none;
-    margin-top: 30px;
+    margin-bottom: 40px;
+
+}
+.section_final {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

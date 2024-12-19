@@ -1,51 +1,19 @@
-// JSON для наглядности:
+// // JSON для наглядности:
 
-const json = [
-    {
-        "type": "pillowcase",
-        "name": "Наволочка Журавль",
-        "icon": "prints/print_11.jpg",
-        "image": "pillowcases/zhurrr.webp",
-        "material": "Шелк и сатин",
-        "size": "50x70 см",
-        "description": "Наволочка из премиальных сортов шелка или сатина. Коллекция посвящена животным и растениям Красной Книги России и призывает напомнить о бережном отношении к природе. Журавль Красавка является одной из самых красивых степных птиц. Эти маленькие птицы с удовольствием селятся на территории России, заводят пару, верность которой сохраняют всю жизнь.",
-        "price": 3200,
-        "quantity": 1
-    },
-    {
-        "type": "pillowcase",
-        "name": "Наволочка Таинственный лес",
-        "icon": "prints/forest_1.webp",
-        "image": "pillowcases/zhurrr.webp",
-        "material": "Шелк и сатин",
-        "size": "50x70 см",
-        "description": "Орнамент Таинственный лес, олицетворяющий собой новые тренды в дизайне интерьера, опирается на классический русский узор и отдает дань уважения славянской традиции. Лес - священное место древних славян, он полон тайн и населен могущественными загадочными существами. Гамма благородных природных цветов Mollen, представленная на рисунке, создана лучшими колористами России.",
-        "price": 3200,
-        "quantity": 2
-    },
-    {
-        "type": "pillowcase",
-        "name": "Наволочка Алконост",
-        "icon": "prints/alkonost.webp",
-        "image": "pillowcases/zhurrr.webp",
-        "material": "Шелк и сатин",
-        "size": "50x70 см",
-        "description": "Волшебная птица Алконост, изображенная на ткани, согласно древнерусским преданиям, прилетает на землю из рая и приносит радость и умиротворение. Чудесное создание порадует вас своей красотой и поможет забыть тревоги и заботы.",
-        "price": 3200,
-        "quantity": 3
-    }
-]
-// Товары в корзине (локал стореж) для примера:
+// const json = 
+// // Товары в корзине (локал стореж) для примера:
 
-const json2 = JSON.stringify(json)
-window.localStorage.setItem('cart', json2);
-window.localStorage.setItem('wrapping', true);
+// const json2 = JSON.stringify(json)
+// window.localStorage.setItem('cart', json2);
+// window.localStorage.setItem('wrapping', true);
 
 
 // Консты:
 
-    const productList = JSON.parse(localStorage.getItem('cart'));
-    const divContainer = document.querySelector('.order-info__card-products-list');
+    // const productList = JSON.parse(localStorage.getItem('cart'));
+
+
+    const divContainer = document.querySelector('.order-info__cart-products-list');
     const totalQuantity = document.querySelector('.totals__quantity-result')
     const totalPrice = document.querySelector('.totals__discount-result')
     const wrapping = document.querySelector('.totals__wrapping-result')
@@ -56,20 +24,61 @@ window.localStorage.setItem('wrapping', true);
     const totalOrderPrice = document.querySelector('.total-price__result')    
     const body = document.querySelector('.body');
     const checkValidate = document.querySelectorAll('.checkValidate')
-    const agreeTerms = document.getElementById('agreeTerms')
-
-
+    const agreeTerms = document.getElementById('agreeTerms');
+    const finalHTML = `<main class="main_final">
+                            <section class="section_final">
+                                <div>
+                                    <nav class="menu">
+                                        <ul class="menu-list">
+                                            <li class="menu-item"><a class="menu-link" href="#">Главная</a></li>
+                                            <span>/</span>
+                                            <li class="menu-item"><a class="menu-link" href="#">Корзина</a></li>
+                                        </ul>
+                                    </nav>
+                                    <h1 class="final_message-title"></h1>
+                                </div>
+                                <div>
+                                    <p class="final_message"></p>
+                                    
+                                    <button class="final_btn"><a class="final_link"></a></button>
+                                </div>
+                            </section>
+                            <aside class="aside_final">
+                            </aside>
+                        </main>`
+    const finalScript = `<script src='assets/scripts/order_sucsess.js'></script>`;
+    let productList = [];
 
     document.querySelector(".totals__btn").disabled = true;
 
+// Рендер корзины c сервера:   
+    const renderProductList = fetch('http://localhost:3000', {
+        method: 'GET'})
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            productList = data.cart;
+            console.log(data.cart)
 
-// Рендер корзины из локал стореж:   
+            for (let item of data.cart) {
+                renderProductCart (item);
+
+            finalCount();
+
+        }})
+    
+        .catch((err) => {
+            body.innerHTML = finalHTML;
+            document.querySelector('.final_message-title').textContent = "Произошла ошибка";
+            document.querySelector('.final_link').textContent = "Вернуться на главную";
+});
+
 
 function renderProductCart (item) {
     const div = document.createElement("div")
-    div.classList.add("card-products-list-item", 'card');
+    div.classList.add("cart-products-list-item", 'card');
     div.innerHTML =
-            // `<button type="button" class="delete-item__btn"><img src="assets/images/delete.svg"></img></button>
             `<div class="product-img"><img src="assets/images/${item.image}"></img></div>
             <a class="product-name" href='order_error.html'>${item.name}</a>
             <div class="product-quantity">
@@ -77,14 +86,15 @@ function renderProductCart (item) {
             </div>
             <div class="product-price">${item.price}</div>`;
     divContainer.append(div);
-}
-productList.forEach(product => {
-    renderProductCart (product)
-    })
+};
+// productList.forEach(product => {
+//     renderProductCart (product)
+//     });
 
 
 //Подсчет и рендер итогов:
 
+function finalCount () {
 countTotals = () => {
     let resultPrice = 0;
     productList.forEach(product => {
@@ -103,11 +113,11 @@ countQuantity = () => {
 };
 totalQuantity.textContent = countQuantity();
 
-if (localStorage.getItem('wrapping')){
+if (data.wrapping){
     wrapping.textContent = '500'}
     else {wrapping.textContent = 'Нет'};
 
-totalOrderPrice.textContent = countTotals() + Number(wrapping.textContent) + 500;
+totalOrderPrice.textContent = countTotals() + Number(wrapping.textContent) + 500;}
 
 deliveryBtn.forEach(function (btn) {
     btn.addEventListener('click', function() {
@@ -198,7 +208,8 @@ $(document).ready(function() {
                 required: "Подтвердите согласие на обработку данных",
                 },
             tel: { 
-                required: "Обязательное поле",
+                required: "Обязательное поле", 
+                minlength: jQuery.validator.format("Введите корректный номер телефона"),
                 },
             },
         errorPlacement: function (e, i) {
@@ -215,81 +226,28 @@ form.addEventListener ("submit", async(e) => {
     createData();
 
 
-            const response = await fetch('http://localhost:3000/orders', {
-            method: 'POST',
-            body: JSON.stringify(data)})
-                        // .then((res) => {
-                        //     return res.json(); 
-                        //     })
-        .then(res => {
-            if (res.ok) {
-                body.innerHTML = `<main class="main_final">
-        <section class="section_final">
-            <nav class="menu">
-                <ul class="menu-list">
-                    <li class="menu-item"><a class="menu-link" href="#">Главная</a></li>
-                    <span>/</span>
-                    <li class="menu-item"><a class="menu-link" href="#">Корзина</a></li>
-                </ul>
-            </nav>
-            <h1>Заказ сформирован</h1>
-            <p class="final_message"></p>
-            <p>Вы можете следить за выполнением своего заказа в Персональном разделе сайта. Обратите внимание, что для входа в этот раздел вам необходимо будет ввести логин и пароль пользователя сайта.</p>
-            <button class="final_btn" onclick="window.location.href='https://www.example.com';">В личный кабинет</button>
-        </section>
-        <aside class="aside_final">
-        </aside>
-    </main>
-    <script src='assets/scripts/order_sucsess.js'></script>`;
-                localStorage.removeItem('cart', 'wrapping');
+    await fetch('http://localhost:3000/orders', {
+        method: 'POST',
+        body: JSON.stringify(data)})
+
+                .then(res => {
+                    if (res.ok) {
+                        body.innerHTML = finalHTML + finalScript;
+                        document.querySelector('.final_message-title').textContent = "Заказ оформлен";
+                        document.querySelector('.final_link').textContent = "На главную";
+                        localStorage.removeItem('cart', 'wrapping');
+
                     }
-            else { 
-                body.innerHTML = `<main class="main_final">
-        <section class="section_final">
-            <nav class="menu">
-                <ul class="menu-list">
-                    <li class="menu-item"><a class="menu-link" href="#">Главная</a></li>
-                    <span>/</span>
-                    <li class="menu-item"><a class="menu-link" href="#">Корзина</a></li>
-                </ul>
-            </nav>
-            <h1>Ошибка с оплатой</h1>     
-            <p class="final_message">Вы можете следить за выполнением своего заказа в Персональном разделе сайта. Обратите внимание, что для входа в этот раздел вам необходимо будет ввести логин и пароль пользователя сайта.</p>
-            <button class="final_btn" onclick="window.location.href='#';">Повторить оплату</button>
-        </section>
-        <aside class="aside_final">
-        </aside>
-    </main>`;
+                    else { 
+                        body.innerHTML = finalHTML;
+                        document.querySelector('.final_message-title').textContent = "Произошла ошибка";
+                        document.querySelector('.final_link').textContent = "Вернуться в корзину";
+
                     }
                 })
-            .catch((err) => {
-                body.textContent = 'Что то пошло не так, повторите попытку';
-                    })
-            // .finally(( ))
-            }
-        );
-    
-        
-
-
-                    
-
-
-
-
-
-                
-
-        // try {
-        //     const response = await fetch('http://localhost:3000/orders', {
-        //       method: "POST", // или 'PUT'
-        //       body: JSON.stringify(data), // данные могут быть 'строкой' или {объектом}!
-        //       headers: {
-        //         "Content-Type": "application/json",
-        //       },
-        //     });
-        //     const json = await response.json();
-        //     console.log("Успех:", JSON.stringify(json));
-        //   } catch (error) {
-        //     console.error("Ошибка:", error);
-        //   }
+                .catch((err) => {
+                    body.innerHTML = finalHTML;
+                    document.querySelector('.final_message-title').textContent = "Произошла ошибка";
+                    document.querySelector('.final_link').textContent = "Вернуться в корзину";
+                })
+});
