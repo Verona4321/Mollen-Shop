@@ -1,7 +1,7 @@
 @import url('style.css');
 
 body {
-    display: flex;
+    /*display: flex;*/
 }
 aside {
     width: 20%;
@@ -10,15 +10,28 @@ aside {
     font-family: 'Circle';
     font-weight: 300;
     font-size: 18px;
+    padding-right: 20px;
+    padding-left: 30px;
 }
 
 main {
-    width: 80%;
+    /*width: 80%;*/
+    display: flex;
+    margin-top: 60px;
 }
 
 .categories {
     color: #4E76C6;
 }
+
+.categories a {
+    color: #4E76C6;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+label {cursor: pointer;}
 
 h1 {
     margin-left: 30px;

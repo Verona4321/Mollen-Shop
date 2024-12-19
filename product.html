@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница товара</title>
+    <link rel="stylesheet" href="assets/styles/product-page.css">
+    <link rel="stylesheet" href="assets/styles/header-footer.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <!-- Левая группа -->
+        <div class="left-group">
+            <div class="burger-menu">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="logo">
+                <a href="/home"><img src="assets/icons/header/mollen.png" alt="Logo"></a>
+            </div>
+            <div class="catalog">
+                <a href="/catalog">КАТАЛОГ</a>
+            </div>
+        </div>
+    
+        <!-- Правая группа -->
+        <div class="right-group">
+            <div class="search-icon">
+                <!-- Иконка для полной версии -->
+                <a href="/search" class="full-screen-icon">
+                    <img src="assets/icons/header/search_full.png" alt="Search">
+                    <span>ПОИСК</span>
+                </a>
+                <!-- Иконка для мобильной версии -->
+                <a href="/search" class="mobile-icon">
+                    <img src="assets/icons/header/search.png" alt="Search">
+                </a>
+            </div>
+            <div class="bed-icon">
+                <!-- Иконка для полной версии -->
+                <a href="/bed" class="full-screen-icon">
+                    <img src="assets/icons/header/bed-full.png" alt="Bed">
+                    <span>КОНСТРУКТОР</span>
+                </a>
+                <!-- Иконка для мобильной версии -->
+                <a href="/bed" class="mobile-icon">
+                    <img src="assets/icons/header/bed.png" alt="Bed">
+                </a>
+            </div>
+            <div class="shopping-bag">
+                <a href="/cart">
+                    <img src="assets/icons/header/shopping_bag2.png" alt="Shopping Bag">
+                </a>
+                <span class="circle"></span>
+            </div>
+        </div>
+    </header>
+
+    <div id="side-menu" class="side-menu">
+        <button id="close-menu-btn" class="close-btn">
+            <img src="assets/icons/header/close.png" alt="Close">
+        </button>
+        <p class="menu-title">Меню</p>
+        <ul>
+            <li>РАЗМЕРНЫЙ ГИД</li>
+            <li>ДОСТАВКА И ОПЛАТА</li>
+            <li>ГАРАНТИЯ И ВОЗВРАТ</li>
+            <li>ЧАСТЫЕ ВОПРОСЫ</li>
+            <li>О БРЕНДЕ</li>
+            <li>КОНТАКТЫ</li>
+        </ul>
+    </div>
+
+    <main class="product-page">
+        <nav class="breadcrumbs">
+        <a href="/home">Главная</a> / <a href="/catalog">Каталог</a> / <a href="/catalog/linen">Постельное белье</a> / Страница товара
+    </nav>
+
+
+
+    <!--БЛОК, КУДА ПОМЕЩАЕТСЯ ВСЯ ИНФА О ТОВАРЕ-->
+    <div class="product-page" id="product-details"></div>
+    </main>
+
+
+
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <!-- Левая часть -->
+            <div class="footer-content">
+                <!-- Левая часть -->
+                <div class="footer-left">
+                    <img src="assets/icons/footer/mollen_white.png" alt="Mollen Logo" class="footer-logo">
+                    <!-- Новый div для текста -->
+                    <div class="copyright">
+                        <p>2021 &copy; Mollen.<br>Все права защищены.</p>
+                    </div>
+                </div>
+    
+            <!-- Центральная часть -->
+            <div class="footer-center">
+                <ul>
+                    <li><a href="#">Постельное белье</a></li>
+                    <li><a href="#">Одежда</a></li>
+                    <li><a href="#">Ароматы</a></li>
+                    <li><a href="#">Аксессуары</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Размерный гид</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Гарантия и возврат</a></li>
+                    <li><a href="#">Частые вопросы</a></li>
+                </ul>
+            </div>
+    
+            <!-- Правая часть -->
+            <div class="footer-right">
+                <p><strong>8 800 222 22 22</strong></p>
+                <a href="#">Заказать звонок</a>
+                <div class="social-icons">
+                    <a href="#" class="icon vk"><img src="assets/icons/footer/vk.png" alt="VK"></a>
+                    <a href="#" class="icon pinterest"><img src="assets/icons/footer/pinterest.png" alt="Pinterest"></a>
+                    <a href="#" class="icon telegram"><img src="assets/icons/footer/telegram.png" alt="Telegram"></a>
+                    <a href="#" class="icon facebook"><img src="assets/icons/footer/facebook.png" alt="Facebook"></a>
+                    <a href="#" class="icon youtube"><img src="assets/icons/footer/youtube.png" alt="YouTube"></a>
+                    <a href="#" class="icon instagram"><img src="assets/icons/footer/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="additional-icons">
+            <div class="arrow-icon">
+                <img src="assets/icons/catalog/arrow1.png" alt="Arrow Icon 1">
+            </div>
+            <div class="arrow-icon">
+                <img src="assets/icons/catalog/arrow2.png" alt="Arrow Icon 2">
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script>
+        async function loadProduct() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            const response = await fetch('catalog.json'); // Укажите путь к вашему JSON файлу
+            const products = await response.json();
+            const product = products.find(p => p.id === parseInt(productId));
+
+            if (product) {
+                const productDiv = document.getElementById('product-details');
+                productDiv.innerHTML = `
+                    <h2 class="product-name">${product.name}</h2>
+                    <img src="${product.image}" alt="${product.name}" style="width: 300px; height: auto;">
+                    <p>${product.availability}</p>
+                    <p>${product.description}</p>
+                    <p>Цена: ${product.price}</p>
+                `;
+            } else {
+                document.getElementById('product-details').innerHTML = '<p>Товар не найден.</p>';
+            }
+        }
+
+        loadProduct();
+    </script>
+</body>
+</html>

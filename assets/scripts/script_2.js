@@ -87,10 +87,8 @@ let allProducts = [];
 //Загрузка данных из json
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Загружаем данные из файла catalog.json
     fetch('catalog.json')
         .then(function(response) {
-            // Проверяем, успешно ли был выполнен запрос
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -124,11 +122,24 @@ document.addEventListener('DOMContentLoaded', function() {
         <h2 class="product-name">${product.name}</h2>
         <div class="availability">${product.availability}</div>
         <div class="price">${product.price} ₽</div>
-        <button class="buy-button">Подробнее</button>
+        <button class="buy-button" onclick="goToProductPage(${product.id})">Подробнее</button>
             `;
+            button.addEventListener('click', goToProductPage(productId));
             productList.appendChild(productCard);
         });
     }
+
+    function goToProductPage(productId) {
+        // Редирект на отдельную страницу продукта
+        window.location.href = `product.html?id=${productId}`;
+    }
+    
+    displayProducts(allProducts);
+
+
+
+
+
 
     function filterProducts(type) {
         if (type === 'all') {

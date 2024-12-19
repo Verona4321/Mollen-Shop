@@ -56,9 +56,23 @@
         </div>
     </header>
 
+    <div id="side-menu" class="side-menu">
+        <button id="close-menu-btn" class="close-btn">
+            <img src="assets/icons/header/close.png" alt="Close">
+        </button>
+        <p class="menu-title">Меню</p>
+        <ul>
+            <li>РАЗМЕРНЫЙ ГИД</li>
+            <li>ДОСТАВКА И ОПЛАТА</li>
+            <li>ГАРАНТИЯ И ВОЗВРАТ</li>
+            <li>ЧАСТЫЕ ВОПРОСЫ</li>
+            <li>О БРЕНДЕ</li>
+            <li>КОНТАКТЫ</li>
+        </ul>
+    </div>
 
     <main class="product-page">
-    <nav class="breadcrumbs">
+    <nav class="breadcrumbs"></nav>
         <a href="/home">Главная</a> / <a href="/catalog">Каталог</a> / <a href="/catalog/linen">Постельное белье</a> / Наволочка двусторонняя
     </nav>
 
@@ -74,7 +88,16 @@
                 <img src="assets/images/product page/side-pic.png" alt="Thumbnail 4">
             </div>
         </div>
-
+        <div class="product-links">
+            <a href="#" class="link-item">
+                <img src="assets/icons/catalog/sizes.png" alt="Размерный Гид">
+                <span>РАЗМЕРНЫЙ ГИД</span>
+            </a>
+            <a href="#" class="link-item">
+                <img src="assets/icons/catalog/uslovia.png" alt="Условия Доставки">
+                <span>УСЛОВИЯ ДОСТАВКИ</span>
+            </a>
+        </div>
         <div class="product-details">
             <h1 class="product-title">НАВОЛОЧКА ДВУХСТОРОННЯЯ</h1>
             <p class="product-id">ID: 23452265</p>
@@ -106,31 +129,16 @@
                 </div>
                 <div class="option">
                     <label for="print">Принт</label>
-                    <div id="print">
-                        <img src="assets/images/print_1.jpg" alt="Print 1">
-                        <img src="assets/images/print_2.jpg" alt="Print 2">
-                        <img src="assets/images/print_3.jpg" alt="Print 3">
-                    </div>
+                    <div id="print" class="prints-container"></div>
                 </div>
                 <div class="option">
                     <label for="colors">Цвета</label>
-                    <div id="colors">
-                        <span class="color-option" style="background-color: #FFD700;"></span>
-                        <span class="color-option" style="background-color: #FF4500;"></span>
-                        <span class="color-option" style="background-color: #00FF7F;"></span>
-                        <span class="color-option" style="background-color: #1E90FF;"></span>
-                        <span class="color-option" style="background-color: #FF69B4;"></span>
-                    </div>
+                    <div id="colors" class="colors-container"></div>
                 </div>
-            </div>
-            <div class="additional-links">
-                <a href="#">РАЗМЕРНЫЙ ГИД</a>
-                <a href="#">УСЛОВИЯ ДОСТАВКИ</a>
             </div>
         </div>
     </div>
 </main>
-</body>
 
 <footer class="site-footer">
     <div class="footer-content">
@@ -164,7 +172,7 @@
         <!-- Правая часть -->
         <div class="footer-right">
             <p><strong>8 800 222 22 22</strong></p>
-            <a href="#">Заказать звонок</a>
+            <a href="#" id="call-request-btn" class="call-request-link">Заказать звонок</a>
             <div class="social-icons">
                 <a href="#" class="icon vk"><img src="assets/icons/footer/vk.png" alt="VK"></a>
                 <a href="#" class="icon pinterest"><img src="assets/icons/footer/pinterest.png" alt="Pinterest"></a>
@@ -174,6 +182,47 @@
                 <a href="#" class="icon instagram"><img src="assets/icons/footer/instagram.png" alt="Instagram"></a>
             </div>
         </div>
+
+        <!-- Попап -->
+        <div id="popup-overlay" class="popup-overlay hidden">
+            <div class="popup-content">
+                <span id="close-popup" class="close-popup">&times;</span>
+                <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="name">Имя *</label>
+                        <input type="text" id="name" placeholder="Иван" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Телефон *</label>
+                        <input type="tel" id="phone" placeholder="+7 (___) ___ - __ - __" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="comment">Комментарий</label>
+                        <input type="text" id="comment" placeholder="Напишите какой вопрос у вас возник">
+                    </div>
+                    <div class="agreement">
+                        <input type="checkbox" id="agree" required>
+                        <label for="agree">Я согласен на <a href="#">обработку персональных данных</a></label>
+                    </div>
+                    <button type="submit" class="submit-btn">ОТПРАВИТЬ</button>
+                </form>
+            </div>
+        </div>
+</div>
+    </div>
+    <div class="additional-icons">
+        <div class="arrow-icon">
+            <img src="assets/icons/catalog/arrow1.png" alt="Arrow Icon 1">
+        </div>
+        <div class="arrow-icon">
+            <img src="assets/icons/catalog/arrow2.png" alt="Arrow Icon 2">
+        </div>
     </div>
 </footer>
+
+<script src="assets/scripts/product-page.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="assets/scripts/pop-up.js"></script>    
+</body>
 </html>
