@@ -272,10 +272,14 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .sort__parametres {
-    width: 250px;
+    width: 500px;
     display: flex;
     justify-content:space-between;
     align-items: center;
     margin-left: 50px;
     
+}
+
+.sort__parametres div {
+    cursor: pointer;
 }
