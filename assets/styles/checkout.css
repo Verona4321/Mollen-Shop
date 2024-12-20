@@ -39,6 +39,12 @@
   border-radius: 0.5rem;
 }
 
+.itemColor {
+  width: 2rem;
+  height: auto;
+  border-radius: 4px;
+}
+
 .itemDetails {
   flex: 1;
   margin-left: 1.5rem;
@@ -119,7 +125,6 @@
   border: none;
 }
 
-
 button {
   border: none;
   background: none;
@@ -128,8 +133,40 @@ button {
 a {
   color: rgba(114, 113, 110, 1);
   text-decoration: none;
+  font-size: 1em;
 }
 
 a:hover {
   text-decoration: underline;
 }
+
+/*стили для боковой панели*/
+
+/* .totals__inner-container {
+  margin-left: 38px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.totals__item {
+  display: flex;
+  justify-content: space-between;
+}
+.circle,
+.totals__terms-link,
+.menu-link,
+.total-price__name,
+.product-quantity,
+.totals__quantity {
+  font-family: "Circe-Light";
+  font-weight: 400;
+  font-size: 14px;
+  color: #72716e;
+}
+.totals__btn {
+  height: 60px;
+  border-radius: 35px;
+  border: none;
+  text-transform: uppercase;
+} */

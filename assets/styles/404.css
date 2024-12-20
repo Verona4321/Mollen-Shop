@@ -29,6 +29,7 @@ h1 {
   margin: 0;
 }
 p {
+  font-family: "OrchideaPro-Regular";
   color: white;
   font-size: 1em;
   letter-spacing: 0.1rem;
@@ -40,15 +41,20 @@ button {
   font-size: 0.7em;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  color: white;
   background-color: rgba(78, 118, 198, 1);
   border: none;
-  border-radius: 30%;
-  width: 10rem;
+  border-radius: 35px;
+  width: 15rem;
   height: 3rem;
   margin-top: 2rem;
+  font-family: "OrchideaPro-Regular";
+  font-size: 14px;
+  color: #1e1e1e;
+  cursor: pointer;
 }
+
 button:active {
+  color: white;
   border-style: solid;
   border-color: rgba(59, 103, 190, 0.774);
   border-width: 0.2em;
