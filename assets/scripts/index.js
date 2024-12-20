@@ -35,3 +35,7 @@ async function displayProducts() {
 
 // Вызов функции при загрузке страницы
 window.onload = displayProducts;
+
+$(document).ready(function () {
+  $('.owl-carousel').owlCarousel();
+});

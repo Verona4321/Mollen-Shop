@@ -100,7 +100,7 @@
   background-image: url('/assets/images/index/pillow-on-bed.png');
   background-size: cover;
   padding: 1vw;
-  color: white 
+  color: white;
 }
 
 .heading-square {
@@ -186,11 +186,13 @@
 
 .link-square {
   text-decoration: none;
-  color: #1E1E1E;
+  color: #1e1e1e;
   margin-left: 5px;
 }
 
-.link-square:hover {color: black;}
+.link-square:hover {
+  color: black;
+}
 
 .button-text {
   margin-left: 190px;
@@ -206,6 +208,10 @@
 .index-square .link {
   display: flex;
   gap: 1vw;
+}
+
+.owl-carousel img {
+  width: 20vw;
 }
 
 @media (min-width: 1800px) {
