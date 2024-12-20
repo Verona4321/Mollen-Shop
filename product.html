@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница товара</title>
-    <link rel="stylesheet" href="assets/styles/product-page.css">
+    <link rel="stylesheet" href="assets/styles/product.css">
     <link rel="stylesheet" href="assets/styles/header-footer.css">
 </head>
 <body>
@@ -130,14 +130,6 @@
                 </div>
             </div>
         </div>
-        <div class="additional-icons">
-            <div class="arrow-icon">
-                <img src="assets/icons/catalog/arrow1.png" alt="Arrow Icon 1">
-            </div>
-            <div class="arrow-icon">
-                <img src="assets/icons/catalog/arrow2.png" alt="Arrow Icon 2">
-            </div>
-        </div>
     </footer>
 
 
@@ -146,29 +138,85 @@
 
 
     <script>
-        async function loadProduct() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const productId = urlParams.get('id');
+       async function loadProduct() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
 
-            const response = await fetch('catalog.json'); // Укажите путь к вашему JSON файлу
-            const products = await response.json();
-            const product = products.find(p => p.id === parseInt(productId));
+    const response = await fetch('catalog.json');
+    const products = await response.json();
+    const product = products.find(p => p.id === parseInt(productId));
 
-            if (product) {
-                const productDiv = document.getElementById('product-details');
-                productDiv.innerHTML = `
-                    <h2 class="product-name">${product.name}</h2>
-                    <img src="${product.image}" alt="${product.name}" style="width: 300px; height: auto;">
-                    <p>${product.availability}</p>
-                    <p>${product.description}</p>
-                    <p>Цена: ${product.price}</p>
-                `;
-            } else {
-                document.getElementById('product-details').innerHTML = '<p>Товар не найден.</p>';
-            }
-        }
+    if (product) {
+        const productDiv = document.getElementById('product-details');
+        productDiv.innerHTML = `
+            <div class="image-container">
+                <img src="${product.image}" alt="${product.name}" class="image">
+            </div>
+            <div class="text-container">
+                <div class="product-name"><h2>${product.name}</h2></div>
+                <div class="availability"><p>${product.availability}</p></div>
+                <div class="description"><p>${product.description}</p></div>
+                <div class="size"><p><span>Размер, см:</span> ${product.size}</p></div>
+                <div class="material"><p><span>Ткань:</span> ${product.material}</p></div>
+                <div class="price"><p>${product.price} ₽</p></div>
+                <button id="add-to-cart" class="add-to-cart-button">
+                        <span id="decrease-quantity" class="quantity-control">-</span>
+                        <span id="product-quantity" class="product-quantity">1</span>
+                        <span id="increase-quantity" class="quantity-control">+</span>
+                        <span>В КОРЗИНУ</span>
+                    </button>
+            </div>
+        `;
 
-        loadProduct();
+
+        // Управление количеством
+        let quantity = 1;
+
+const decreaseButton = document.getElementById('decrease-quantity');
+const increaseButton = document.getElementById('increase-quantity');
+const quantityDisplay = document.getElementById('product-quantity');
+
+decreaseButton.addEventListener('click', (event) => {
+    event.stopPropagation(); // Останавливаем всплытие клика, чтобы не срабатывало добавление в корзину
+    if (quantity > 1) {
+        quantity--;
+        quantityDisplay.textContent = quantity;
+    }
+});
+
+increaseButton.addEventListener('click', (event) => {
+    event.stopPropagation(); // Останавливаем всплытие
+    quantity++;
+    quantityDisplay.textContent = quantity;
+});
+
+        // Add to Cart functionality
+        document.getElementById('add-to-cart').addEventListener('click', () => {
+            addToCart({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+                size: product.size,
+                material: product.material,
+                quantity: 1
+            });
+        });
+    } else {
+        document.getElementById('product-details').innerHTML = '<p>Товар не найден.</p>';
+    }
+}
+
+loadProduct();
+
     </script>
+
+<script src="assets/scripts/script_2_1.js"></script>
+<script src="assets/scripts/load_product.js"></script>
+<script src="assets/scripts/pop-up.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="assets/scripts/product-page.js"></script>
+<script src="assets/scripts/cart.js"></script>
+
 </body>
 </html>
