@@ -1,136 +1,135 @@
 .checkoutItems {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  padding-left: 2rem;
-  margin-left: none;
+  width: 80%;
+  margin: 0 auto; /* Center the cart section */
+  padding: 1rem 0;
 }
+
 .checkoutHeader {
   display: flex;
   flex-direction: column;
-  padding-top: 3rem;
-  padding-bottom: 1rem;
-  padding-left: 2rem;
-  border-style: solid;
-  border-color: rgba(236, 234, 231, 1);
-  border-top: none;
-  /* border-left: none; */
-  border-width: 0.15rem;
+  padding: 2rem 1rem;
+  border-bottom: 2px solid rgba(236, 234, 231, 1);
 }
-.checkoutItem {
-  display: flex;
-  justify-content: space-between;
-  height: 15rem;
-  border-style: solid;
-  border-color: rgba(236, 234, 231, 1);
-  border-top: none;
-  /* border-left: none; */
-  border-width: 0.15rem;
+
+.checkoutHeader h1 {
+  font-size: 2.5em;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  color: rgba(30, 30, 30, 1);
 }
-.itemDetails {
-  padding-top: 0.5rem;
-  padding-right: 5rem;
-}
-.sizeAndColor {
-  display: flex;
-}
-h1 {
-  margin: 0;
-  font-size: 2em;
-}
-.smallText {
-  color: rgba(114, 113, 110, 1);
-  font-size: 1em;
-}
+
 .smallTextHeader {
   color: rgba(114, 113, 110, 1);
   font-size: 1em;
 }
-.smallText:last-of-type {
-  text-transform: uppercase;
+
+.checkoutItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 2px solid rgba(236, 234, 231, 1);
 }
-h1,
-h2 {
-  color: rgba(30, 30, 30, 1);
-  text-transform: uppercase;
-}
-h2 {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-  font-size: 1.2em;
-}
+
 .itemImage {
-  width: 20em;
-  height: 13em;
-}
-.size {
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-  margin-top: 0.2rem;
-  margin-bottom: 2rem;
-  margin-right: 2rem;
-  border: thin;
-  border-color: rgb(219, 218, 216);
-  border-style: solid;
-}
-.itemColor {
-  width: 2em;
-  height: 2em;
+  width: 15rem;
+  height: auto;
   border-radius: 0.5rem;
 }
+
+.itemDetails {
+  flex: 1;
+  margin-left: 1.5rem;
+}
+
+.itemDetails h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5rem;
+  color: rgba(30, 30, 30, 1);
+}
+
+.sizeAndColor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1em;
+  color: rgba(114, 113, 110, 1);
+}
+
+.size {
+  padding: 0.2rem 0.6rem;
+  border: 1px solid rgb(219, 218, 216);
+  border-radius: 0.3rem;
+  background-color: rgba(245, 243, 240, 1);
+}
+
 .itemQuantity {
-  color: rgba(114, 113, 110, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 8rem;
+  height: 2.5rem;
   background-color: rgba(245, 243, 240, 1);
+  border-radius: 1.5rem;
   font-size: 1.2em;
-  height: 2rem;
-  width: 9rem;
-  margin-top: 4rem;
-  border-radius: 2rem;
 }
-.quantity {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-.quantityLess {
-  color: rgba(114, 113, 110, 1);
-  background-color: rgba(245, 243, 240, 1);
-  font-size: 1.2em;
-  width: 0.5rem;
-  margin-left: 1.4rem;
-  margin-right: 0.6rem;
-}
+
+.quantityLess,
 .quantityMore {
-  color: rgba(114, 113, 110, 1);
-  background-color: rgba(245, 243, 240, 1);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   font-size: 1.2em;
-  width: 0.5rem;
-  margin-left: 0.4rem;
-  margin-top: 0.2rem;
-  margin-right: 0.1rem;
+  background-color: rgba(236, 234, 231, 1);
+  color: rgba(114, 113, 110, 1);
+  cursor: pointer;
 }
+
+.quantityLess:hover,
+.quantityMore:hover {
+  background-color: rgba(219, 218, 216, 1);
+}
+
+.quantity {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
 .itemPrice {
-  width: 9rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 4rem;
-  font-size: 1.3em;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgba(30, 30, 30, 1);
+  margin: 0 1rem;
 }
+
 .deleteButton {
-  width: 1.5em;
-  height: 1.5em;
-  margin-top: 4rem;
-  border-radius: 1rem;
-  background-color: rgba(245, 243, 240, 1);
-  margin-right: 2rem;
-}
-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60%;
+  color: rgb(53, 35, 130);
+  font-size: 1.2em;
+  cursor: pointer;
   border: none;
 }
-a,
-a:hover,
-a:active,
-a:visited {
-  text-decoration: none;
+
+
+button {
+  border: none;
+  background: none;
+}
+
+a {
   color: rgba(114, 113, 110, 1);
-  font-size: 1em;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
