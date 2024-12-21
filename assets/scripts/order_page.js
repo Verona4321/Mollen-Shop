@@ -1,4 +1,46 @@
 
+// const json = [
+//     {
+//         "type": "pillowcase",
+//         "name": "Наволочка Журавль",
+//         "icon": "prints/print_11.jpg",
+//         "image": "pillowcases/zhurrr.webp",
+//         "material": "Шелк и сатин",
+//         "size": "50x70 см",
+//         "description": "Наволочка из премиальных сортов шелка или сатина. Коллекция посвящена животным и растениям Красной Книги России и призывает напомнить о бережном отношении к природе. Журавль Красавка является одной из самых красивых степных птиц. Эти маленькие птицы с удовольствием селятся на территории России, заводят пару, верность которой сохраняют всю жизнь.",
+//         "price": 3200,
+//         "quantity": 1
+//     },
+//     {
+//         "type": "pillowcase",
+//         "name": "Наволочка Таинственный лес",
+//         "icon": "prints/forest_1.webp",
+//         "image": "pillowcases/zhurrr.webp",
+//         "material": "Шелк и сатин",
+//         "size": "50x70 см",
+//         "description": "Орнамент Таинственный лес, олицетворяющий собой новые тренды в дизайне интерьера, опирается на классический русский узор и отдает дань уважения славянской традиции. Лес - священное место древних славян, он полон тайн и населен могущественными загадочными существами. Гамма благородных природных цветов Mollen, представленная на рисунке, создана лучшими колористами России.",
+//         "price": 3200,
+//         "quantity": 2
+//     },
+//     {
+//         "type": "pillowcase",
+//         "name": "Наволочка Алконост",
+//         "icon": "prints/alkonost.webp",
+//         "image": "pillowcases/zhurrr.webp",
+//         "material": "Шелк и сатин",
+//         "size": "50x70 см",
+//         "description": "Волшебная птица Алконост, изображенная на ткани, согласно древнерусским преданиям, прилетает на землю из рая и приносит радость и умиротворение. Чудесное создание порадует вас своей красотой и поможет забыть тревоги и заботы.",
+//         "price": 3200,
+//         "quantity": 3
+//     }
+// ]
+// // Товары в корзине (локал стореж) для примера:
+
+// const json2 = JSON.stringify(json)
+// window.localStorage.setItem('cart', json2);
+// window.localStorage.setItem('wrapping', true);
+
+
 // Консты:
 
     const productList = JSON.parse(localStorage.getItem('cart'));
@@ -7,7 +49,7 @@
     const divContainer = document.querySelector('.order-info__cart-products-list');
     const totalQuantity = document.querySelector('.totals__quantity-result')
     const totalPrice = document.querySelector('.totals__discount-result')
-    const wrapping = document.querySelector('.totals__wrapping-result')
+    // const wrapping = document.querySelector('.totals__wrapping-result')
     const shipping = document.querySelector('.totals__shipping-result')
     const deliveryBtn = document.querySelectorAll('.deliveryBtn');
     const pickupOption = document.getElementById('pickupOption')
@@ -78,7 +120,7 @@ const countQuantity = () => {
     return resultQuantity;
     };
 
-
+    totalQuantity.textContent = countQuantity();
 
 
 const countTotals = () => {
@@ -90,15 +132,14 @@ const countTotals = () => {
     };
     totalPrice.textContent = countTotals();
 
-    countQuantity()
     
-    totalQuantity.textContent = countQuantity();
+    
 
-    if (localStorage.getItem('wrapping')){
-        wrapping.textContent = '500'}
-        else {wrapping.textContent = 'Нет'};
+    // if (localStorage.getItem('wrapping')){
+    //     wrapping.textContent = '500'}
+    //     else {wrapping.textContent = 'Нет'};
 
-    totalOrderPrice.textContent = countTotals() + Number(wrapping.textContent) + 500;
+    totalOrderPrice.textContent = countTotals() + 500;
 
 
 
@@ -107,11 +148,11 @@ deliveryBtn.forEach(function (btn) {
     btn.addEventListener('click', function() {
         if (deliveryOption.checked) {
             shipping.textContent = '500';
-            totalOrderPrice.textContent = countTotals() + Number(wrapping.textContent) + 500;
+            totalOrderPrice.textContent = countTotals() + 500;
         } 
         else if (pickupOption.checked) {
             shipping.textContent = 'Бесплатно';
-            totalOrderPrice.textContent = countTotals() + Number(wrapping.textContent);
+            totalOrderPrice.textContent = countTotals();
         } 
         else (shipping.textContent = 'Ошибка')
     })
@@ -153,7 +194,7 @@ const createData = () => {
     });
     
     cartData.products = localStorage.getItem('cart');
-    cartData.wrapping = localStorage.getItem('wrapping');
+    // cartData.wrapping = localStorage.getItem('wrapping');
 return cartData;
 };
 
@@ -202,6 +243,7 @@ $(document).ready(function() {
 // Отправка формы
 
 form.addEventListener ("submit", async(e) => {
+
     e.preventDefault();
 
     createData();
@@ -216,7 +258,7 @@ form.addEventListener ("submit", async(e) => {
                         // body.innerHTML = finalHTML + finalScript;
                         // document.querySelector('.final_message-title').textContent = "Заказ оформлен";
                         // document.querySelector('.final_link').textContent = "На главную";
-                        localStorage.removeItem('cart', 'wrapping');
+                        localStorage.removeItem('cart');
                         window.location = 'order_success.html';
                         form.reset;
 
