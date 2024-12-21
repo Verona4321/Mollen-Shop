@@ -49,7 +49,7 @@
     const divContainer = document.querySelector('.order-info__cart-products-list');
     const totalQuantity = document.querySelector('.totals__quantity-result')
     const totalPrice = document.querySelector('.totals__discount-result')
-    const wrapping = document.querySelector('.totals__wrapping-result')
+    // const wrapping = document.querySelector('.totals__wrapping-result')
     const shipping = document.querySelector('.totals__shipping-result')
     const deliveryBtn = document.querySelectorAll('.deliveryBtn');
     const pickupOption = document.getElementById('pickupOption')
@@ -135,11 +135,11 @@ const countTotals = () => {
     
     
 
-    if (localStorage.getItem('wrapping')){
-        wrapping.textContent = '500'}
-        else {wrapping.textContent = 'Нет'};
+    // if (localStorage.getItem('wrapping')){
+    //     wrapping.textContent = '500'}
+    //     else {wrapping.textContent = 'Нет'};
 
-    totalOrderPrice.textContent = countTotals() + Number(wrapping.textContent) + 500;
+    totalOrderPrice.textContent = countTotals() + 500;
 
 
 
@@ -148,11 +148,11 @@ deliveryBtn.forEach(function (btn) {
     btn.addEventListener('click', function() {
         if (deliveryOption.checked) {
             shipping.textContent = '500';
-            totalOrderPrice.textContent = countTotals() + Number(wrapping.textContent) + 500;
+            totalOrderPrice.textContent = countTotals() + 500;
         } 
         else if (pickupOption.checked) {
             shipping.textContent = 'Бесплатно';
-            totalOrderPrice.textContent = countTotals() + Number(wrapping.textContent);
+            totalOrderPrice.textContent = countTotals();
         } 
         else (shipping.textContent = 'Ошибка')
     })
@@ -194,7 +194,7 @@ const createData = () => {
     });
     
     cartData.products = localStorage.getItem('cart');
-    cartData.wrapping = localStorage.getItem('wrapping');
+    // cartData.wrapping = localStorage.getItem('wrapping');
 return cartData;
 };
 
@@ -258,7 +258,7 @@ form.addEventListener ("submit", async(e) => {
                         // body.innerHTML = finalHTML + finalScript;
                         // document.querySelector('.final_message-title').textContent = "Заказ оформлен";
                         // document.querySelector('.final_link').textContent = "На главную";
-                        localStorage.removeItem('cart', 'wrapping');
+                        localStorage.removeItem('cart');
                         window.location = 'order_success.html';
                         form.reset;
 
