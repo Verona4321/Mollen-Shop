@@ -21,7 +21,7 @@
                 <a href="/home"><img src="assets/icons/header/mollen.png" alt="Logo"></a>
             </div>
             <div class="catalog">
-                <a href="/catalog">КАТАЛОГ</a>
+                <a href="/catalog__2_1.html">КАТАЛОГ</a>
             </div>
         </div>
     
@@ -30,7 +30,7 @@
             <div class="search-icon">
                 <!-- Иконка для полной версии -->
                 <a href="/search" class="full-screen-icon">
-                    <img src="assets/icons/header/search_full.png" alt="Search">
+                    
                     <span>ПОИСК</span>
                 </a>
                 <!-- Иконка для мобильной версии -->
@@ -50,7 +50,7 @@
                 </a>
             </div>
             <div class="shopping-bag">
-                <a href="/cart">
+                <a href="/checkout.html">
                     <img src="assets/icons/header/shopping_bag2.png" alt="Shopping Bag">
                 </a>
                 <span class="circle"></span>
@@ -116,19 +116,46 @@
                 </ul>
             </div>
     
-            <!-- Правая часть -->
-            <div class="footer-right">
-                <p><strong>8 800 222 22 22</strong></p>
-                <a href="#">Заказать звонок</a>
-                <div class="social-icons">
-                    <a href="#" class="icon vk"><img src="assets/icons/footer/vk.png" alt="VK"></a>
-                    <a href="#" class="icon pinterest"><img src="assets/icons/footer/pinterest.png" alt="Pinterest"></a>
-                    <a href="#" class="icon telegram"><img src="assets/icons/footer/telegram.png" alt="Telegram"></a>
-                    <a href="#" class="icon facebook"><img src="assets/icons/footer/facebook.png" alt="Facebook"></a>
-                    <a href="#" class="icon youtube"><img src="assets/icons/footer/youtube.png" alt="YouTube"></a>
-                    <a href="#" class="icon instagram"><img src="assets/icons/footer/instagram.png" alt="Instagram"></a>
-                </div>
+           <!-- Правая часть -->
+        <div class="footer-right">
+            <p><strong>8 800 222 22 22</strong></p>
+            <a href="#" id="call-request-btn" class="call-request-link">Заказать звонок</a>
+            <div class="social-icons">
+                <a href="#" class="icon vk"><img src="assets/icons/footer/vk.png" alt="VK"></a>
+                <a href="#" class="icon pinterest"><img src="assets/icons/footer/pinterest.png" alt="Pinterest"></a>
+                <a href="#" class="icon telegram"><img src="assets/icons/footer/telegram.png" alt="Telegram"></a>
+                <a href="#" class="icon facebook"><img src="assets/icons/footer/facebook.png" alt="Facebook"></a>
+                <a href="#" class="icon youtube"><img src="assets/icons/footer/youtube.png" alt="YouTube"></a>
+                <a href="#" class="icon instagram"><img src="assets/icons/footer/instagram.png" alt="Instagram"></a>
             </div>
+        </div>
+
+        <!-- Попап -->
+        <div id="popup-overlay" class="popup-overlay hidden">
+            <div class="popup-content">
+                <span id="close-popup" class="close-popup">&times;</span>
+                <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="name">Имя *</label>
+                        <input type="text" id="name" placeholder="Иван" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Телефон *</label>
+                        <input type="tel" id="phone" placeholder="+7 (___) ___ - __ - __" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="comment">Комментарий</label>
+                        <input type="text" id="comment" placeholder="Напишите какой вопрос у вас возник">
+                    </div>
+                    <div class="agreement">
+                        <input type="checkbox" id="agree" required>
+                        <label for="agree">Я согласен на <a href="#">обработку персональных данных</a></label>
+                    </div>
+                    <button type="submit" class="submit-btn">ОТПРАВИТЬ</button>
+                </form>
+            </div>
+        </div>
         </div>
     </footer>
 
