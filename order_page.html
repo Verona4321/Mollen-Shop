@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/order_page.css">
+</head>
+<body class ="body">
+    <custom-header></custom-header>
+    <main class="main">
+        <form class="form">
+
+            <section class="menu-container">
+                <nav class="menu">
+                    <ul class="menu-list">
+                        <li class="menu-item"><a class="menu-link" href="index.html">Главная</a></li>
+                        <span>/</span>
+                        <li class="menu-item"><a class="menu-link" href="#">Корзина</a></li>
+                    </ul>
+                </nav>
+                <h1>Оформить заказ</h1>
+            </section>
+
+            <section class="total-price">
+                <p class="total-price__name">Итого</p>
+                <h1 class="total-price__result"></h1>
+            </section>
+
+            <section class="order-info">
+                
+                    <div class="order-info__subtitle">
+                        <h2>Личные данные</h2>
+                    </div>
+                
+                    <div class="order-info__user-form">
+                    <div class="inner-container">
+                        <div class='radio'>
+                            <div class="radio-item">
+                                <input type="radio" id="indOption" name="buyer-type-option" value="indOption" checked>
+                                <label for="indOption">Физ. лицо</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="legalOption" name="buyer-type-option" value="legalOption">
+                                <label for="legalOption">Юр. лицо</label>
+                            </div>
+                        </div>
+
+                        <div class='user-form-item'>
+                            <div class="user-form-item__title">
+                                <label for="userName">Имя</label>
+                            </div>
+                            <div class="user-form-item__input valid-field">
+                                <input name="userName" class="input-field checkValidate" type="text" id="userName" placeholder="Иван" minlength="2" maxlength="20" required/>
+                                <span class="error" id="userNameError"></span>
+                            </div>
+                        </div>
+
+                        <div class='user-form-item'>
+                            <div class="user-form-item__title">
+                                <label for="userSurname">Фамилия</label>
+                            </div>
+                            <div class="user-form-item__input valid-field">
+                                <input name="userSurname" class="input-field checkValidate" type="text" id="userSurname" placeholder="Иванов" minlength="2" maxlength="50" required/>
+                                <span class="error" id="userSurnameError"></span>
+                            </div>
+                        </div>
+
+                        <div class='user-form-item'>
+                            <div class="user-form-item__title">
+                                <label for="tel">Телефон</label>
+                            </div>
+                            <div class="user-form-item__input valid-field">
+                                <input name="tel" id="tel" name="tel" type="text" class="input-field checkValidate" placeholder="+ 7 (_____)  _____  -  ___  -  ___" maxlength="16" name="phone" required/>
+                                <span class="error" id="telError"></span>
+                            </div>
+                        </div>
+
+                        <div class='user-form-item'>
+                            <div class="user-form-item__title">
+                                <label for="com-select">Способ связи</label>
+                            </div>
+                            <div class="user-form-item__input">
+                                <select name="com-select" id="com-select" class="input-field" required>
+                                    <option value="select1">Телефон</option>
+                                    <option value="select2">Telegram</option>
+                                    <option value="select3">WhatsApp</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class='user-form-item'>
+                            <div class="user-form-item__title">
+                                <label for="city-select">Город</label>
+                            </div>
+                            <div class="user-form-item__input">
+                                <select name="city-select" id="city-select" class="input-field"  required>
+                                    <option value="select1">Санкт-Петербург</option>
+                                    <option value="select2">Москва</option>
+                                    <option value="select3">Уфа</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class='user-form-item'>
+                            <div class="user-form-item__title">
+                                <label for="address">Адрес</label>
+                            </div>
+                            <div class="user-form-item__input valid-field">
+                                <input name="address" class="input-field checkValidate" type="text" id="address" placeholder="Улица, дом, квартира" minlength="2" maxlength="50" required/>
+                                <span class="error" id="addressError"></span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="order-info__subtitle">
+                        <h2>Доставка</h2>
+                    </div>
+
+                    <div class="order-info__delivery-form">
+                        <div class="inner-container">
+                            <div class="delivery-form-item">
+                                <label for="deliveryOption"  class="delivery-form-item__input">
+                                    <input class="deliveryBtn" type="radio" id="deliveryOption" name="get-product-option" value="deliveryOption" checked>
+                                    <div>
+                                        <span class="orh">Почта России (EMS)</span>
+                                        <p class="circle">Экспресс-отправления EMS — это самый быстрый и удобный способ доставить письмо или посылку по России и за границу. Курьер заберет отправление в удобном для вас месте и доставит его адресату домой или в офис. Экспресс-отправление является регистрируемым, его доставку и вручение можно отследить с помощью трек-номера. В городах, где нет курьерской службы EMS, отправить и получить экспресс-отправление можно через отделение Почты России</p>
+                                    </div>
+                                </label>
+                                <div class="delivery-form-item__price">
+                                    <span class="orh">500 ₽</span>
+                                    <p class="circle">до 1 раб. дня</p>
+                                </div>
+                            </div>
+
+                            <div class="delivery-form-item">
+                                <label for="pickupOption"  class="delivery-form-item__input">
+                                    <input class="deliveryBtn" type="radio" id="pickupOption" name="get-product-option" value="pickupOption">
+                                    <div>
+                                        <span class="orh">Самовывоз</span>
+                                        <p class="circle">Вы можете самостоятельно забрать заказ из нашего магазина.</p>
+                                    </div>
+                                </label>
+                                <div class="delivery-form-item__price">
+                                    <span class="orh">Бесплатно</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="order-info__subtitle">
+                        <h2>Способ оплаты</h2>
+                    </div>
+                    <div class="order-info__pay-form">
+                        <div class="inner-container">
+                            <div class= "pay-form-item">
+                                <label for="cardOption" class="pay-form-item__input">
+                                    <input type="radio" id="cardOption" name="pay-option" value="cardOption" checked>
+                                    <span class="orh">Онлайн</span>
+                                </label>
+                                <div>
+                                    <span class="circle">Картами Visa, MasterCard, Мир</span>
+                                </div>
+                            </div>
+
+                            <div class= "pay-form-item">
+                                <label for="walletOption" class="pay-form-item__input">
+                                    <input type="radio" id="walletOption" name="pay-option" value="walletOption">
+                                    <span class="orh">Электронными деньгами</span>
+                                </label>
+                                <div>
+                                    <span class="circle">ЮMoney, QIWI Wallet</span>
+                                </div>
+                            </div>
+
+                            <div class= "pay-form-item">
+                                <label for="cashOption" class="pay-form-item__input">
+                                    <input type="radio" id="cashOption" name="pay-option" value="cashOption">
+                                    <span class="orh">При получении</span>
+                                </label>
+                                <div>
+                                    <span class="circle">Наличными или картой</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="order-info__subtitle">
+                        <h2>Товары в корзине</h2>
+                    </div>
+
+                    <div class="order-info__cart-products-list">
+                    </div>
+                </div>
+
+            </section>
+
+        <section class="totals circle">
+            <div class="totals__inner-container">
+            <div class="totals__item">
+                <span class="totals__quantity">Количество товаров</span>
+                <span class="totals__quantity-result"></span>
+            </div>
+            <div class="totals__item">
+                <span class="totals__discount">Стоимость товаров</span>
+                <span class="totals__discount-result"></span>
+            </div>
+            <div class="totals__item">
+                <span class="totals__wrapping">Подарочная упаковка</span>
+                <span class="totals__wrapping-result"></span>
+            </div>
+            <div class="totals__item">
+                <span class="totals__shipping">Доставка</span>
+                <span class="totals__shipping-result">500</span>
+            </div>
+            <button class="totals__btn" type="submit">Заказать</button>
+
+            <div class="totals__terms valid-field">
+                <input type="checkbox"  name="agreeTerms" id="agreeTerms" class ="checkValidate" required/>
+                <label for="agreeTerms">
+                    <span>Я согласен на </span>
+                    <a class="totals__terms-link" href="#">обработку персональных данных и публичной офертой</a>
+                </label>
+                <div id="termsError"></div>
+            </div>
+            </div>
+        </section>
+        </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    <script src='assets/scripts/cleave.min.js'></script>
+    <script src='assets/scripts/cleave-phone.ru.js'></script>
+    <script src='assets/scripts/order_page.js'></script>
+    <script src='assets/scripts/header.js'></script>
+
+    
+</body>
+</html>
