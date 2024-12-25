@@ -93,7 +93,7 @@ function renderProductCart (item) {
     const div = document.createElement("div")
     div.classList.add("cart-products-list-item", 'card');
     div.innerHTML =
-            `<div class="product-img"><img src="assets/images/${item.image}"></img></div>
+            `<div class="product-img"><img src="${item.image}"></img></div>
             <a class="product-name" href='order_error.html'>${item.name}</a>
             <div class="product-quantity">
                 <span>${item.quantity}</span><span> шт</span>
